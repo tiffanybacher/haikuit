@@ -1,0 +1,7 @@
+$purple: #42184e;
+$border-radius: 3px;
+
+@mixin border {
+  border: none;
+  border-radius: $border-radius;
+}

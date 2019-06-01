@@ -5,7 +5,9 @@ class Menu extends Component {
     return (
       <section className="Menu">
         <nav className="Menu-sidebar">
-          <button onClick={this.props.toggleMenu}>
+          <button 
+            className="Menu-close-btn"
+            onClick={this.props.toggleMenu}>
             <i className="fas fa-times"></i>
           </button>
           <li>About</li>

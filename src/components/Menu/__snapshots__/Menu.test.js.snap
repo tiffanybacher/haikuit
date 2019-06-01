@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should match snapshot 1`] = `
+<section
+  className="Menu"
+>
+  <nav
+    className="Menu-sidebar"
+  >
+    <button
+      className="Menu-close-btn"
+      onClick={[MockFunction]}
+    >
+      <i
+        className="fas fa-times"
+      />
+    </button>
+    <li>
+      About
+    </li>
+    <li>
+      Your Haikus
+    </li>
+  </nav>
+</section>
+`;

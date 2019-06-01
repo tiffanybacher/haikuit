@@ -10,7 +10,7 @@ exports[`App should match snapshot 1`] = `
 </div>
 `;
 
-exports[`App should match snapshot if menu is shown 1`] = `
+exports[`App should match snapshot if menuShown is true 1`] = `
 <div
   className="App"
 >

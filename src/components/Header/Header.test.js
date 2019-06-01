@@ -12,4 +12,18 @@ describe('Header', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should toggle search bar', () => {
+    expect(wrapper.state('searchShown')).toBe(false);
+
+    wrapper.instance().toggleSearch();
+
+    expect(wrapper.state('searchShown')).toBe(true);
+  });
+
+  it('should render search bar if searchShown is true', () => {
+    wrapper.setState({ searchShown: true });
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });

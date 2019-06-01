@@ -29,7 +29,7 @@ describe('App', () => {
     expect(wrapper.state('menuShown')).toBe(true);
   });
 
-  it('should match snapshot if menu is shown', () => {
+  it('should match snapshot if menuShown is true', () => {
     wrapper.setState({ menuShown: true });
 
     expect(wrapper).toMatchSnapshot();

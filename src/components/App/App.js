@@ -15,9 +15,7 @@ class App extends Component {
   }
 
   renderMenu = () => {
-    const { menuShown } = this.state;
-
-    return menuShown 
+    return this.state.menuShown 
       ? <Menu toggleMenu={this.toggleMenu} /> 
       : null
   }

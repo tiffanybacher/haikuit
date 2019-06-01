@@ -17,7 +17,7 @@ describe('HamburgerIcon', () => {
   });
 
   it('should open menu drawer when clicked', () => {
-    wrapper.find('.Hamburger').simulate('click');
+    wrapper.find('.HamburgerIcon').simulate('click');
 
     expect(toggleMenu).toHaveBeenCalled();
   });

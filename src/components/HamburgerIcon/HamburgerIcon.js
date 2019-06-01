@@ -3,7 +3,7 @@ import React from 'react';
 function HamburgerIcon(props) {
   return (
     <button 
-      className="Hamburger" 
+      className="HamburgerIcon" 
       onClick={props.toggleMenu}>
       <i className="fas fa-bars"></i>
     </button>

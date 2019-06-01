@@ -4,13 +4,22 @@ import SearchIcon from '../SearchIcon/SearchIcon';
 
 class Header extends Component {
   state = {
-    searchIsShown: false
+    searchShown: false
   }
 
   toggleSearch = () => {
     this.setState({
-      searchIsShown: !this.state.searchIsShown
+      searchShown: !this.state.searchShown
     });
+  }
+
+  renderSearch = () => {
+    return this.state.searchShown 
+      ? <input 
+          type="text" 
+          className="search-input" 
+          placeholder="Search for a word..." />
+      : null
   }
 
   render() {
@@ -21,14 +30,7 @@ class Header extends Component {
           <h1>Haikuit<i className="fas fa-feather-alt"></i></h1>
           <SearchIcon toggleSearch={this.toggleSearch} />
         </div>
-        {
-        this.state.searchIsShown 
-          ? <input 
-              type="text" 
-              className="search-input" 
-              placeholder="Search for a word..." />
-          : null
-        }
+        {this.renderSearch()}
       </header>
     );
   }

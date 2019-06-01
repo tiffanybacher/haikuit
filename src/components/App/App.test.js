@@ -20,5 +20,19 @@ describe('App', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should update state for MenuShown', () => {
+    expect(wrapper.state('menuShown')).toBe(false);
+
+    wrapper.instance().toggleMenu();
+
+    expect(wrapper.state('menuShown')).toBe(true);
+  });
+
+  it('should match snapshot if menu is shown', () => {
+    wrapper.setState({ menuShown: true });
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 

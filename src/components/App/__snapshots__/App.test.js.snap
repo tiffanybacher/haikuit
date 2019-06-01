@@ -9,3 +9,16 @@ exports[`App should match snapshot 1`] = `
   />
 </div>
 `;
+
+exports[`App should match snapshot if menu is shown 1`] = `
+<div
+  className="App"
+>
+  <Menu
+    toggleMenu={[Function]}
+  />
+  <Header
+    toggleMenu={[Function]}
+  />
+</div>
+`;

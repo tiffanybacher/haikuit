@@ -1,0 +1,34 @@
+.Menu {
+  background: rgba(black, .5);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.Menu-sidebar {
+  background: $purple;
+  color: white;
+  height: 100%;
+  width: 60%;
+
+  .fa-times {
+    color: white;
+    font-size: 1.75em;
+  }
+
+  li {
+    font-size: 1.25em;
+    padding: 10px;
+    list-style-type: none;
+    transition: 0.3s;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Menu-sidebar {
+    width: 30%;
+  }
+}

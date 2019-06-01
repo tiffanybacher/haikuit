@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div
+  className="App"
+>
+  <Header
+    toggleMenu={[Function]}
+  />
+</div>
+`;
+
+exports[`App should match snapshot if menuShown is true 1`] = `
+<div
+  className="App"
+>
+  <Menu
+    toggleMenu={[Function]}
+  />
+  <Header
+    toggleMenu={[Function]}
+  />
+</div>
+`;

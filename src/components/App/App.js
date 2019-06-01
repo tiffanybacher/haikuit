@@ -1,12 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Header from '../Header/Header';
+import Menu from '../Menu/Menu';
 
-function App() {
+class App extends Component {
+  state = {
+    menuShown: false
+  }
+
+  toggleMenu = () => {
+    this.setState({
+      menuShown: !this.state.menuShown
+    });
+  }
+
+  renderMenu = () => {
+    const { menuShown } = this.state;
+
+    return menuShown 
+      ? <Menu toggleMenu={this.toggleMenu} /> 
+      : null
+  }
+
+  render() {
     return (
         <div className="App">
-            <Header />
+          {this.renderMenu()}
+          <Header toggleMenu={this.toggleMenu} />
         </div>
     );
+  }
 }
 
 export default App;
+
+App.propTypes = {
+  menuShown: PropTypes.bool
+}

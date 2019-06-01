@@ -17,8 +17,8 @@ class Header extends Component {
     return (
       <header className="Header">
         <div className="flex-container">
-          <HamburgerIcon />
-          <h1>Haikuit<i class="fas fa-feather-alt"></i></h1>
+          <HamburgerIcon toggleMenu={this.props.toggleMenu} />
+          <h1>Haikuit<i className="fas fa-feather-alt"></i></h1>
           <SearchIcon toggleSearch={this.toggleSearch} />
         </div>
         {

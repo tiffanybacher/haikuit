@@ -1,9 +1,11 @@
 import React from 'react';
 
-function HamburgerIcon() {
+function HamburgerIcon(props) {
   return (
-    <button className="Hamburger">
-      <i class="fas fa-bars"></i>
+    <button 
+      className="Hamburger" 
+      onClick={props.toggleMenu}>
+      <i className="fas fa-bars"></i>
     </button>
   );
 }

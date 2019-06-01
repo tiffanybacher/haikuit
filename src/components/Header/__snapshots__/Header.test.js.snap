@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshot 1`] = `
+<header
+  className="Header"
+>
+  <div
+    className="flex-container"
+  >
+    <HamburgerIcon />
+    <h1>
+      Haikuit
+      <i
+        className="fas fa-feather-alt"
+      />
+    </h1>
+    <SearchIcon
+      toggleSearch={[Function]}
+    />
+  </div>
+</header>
+`;

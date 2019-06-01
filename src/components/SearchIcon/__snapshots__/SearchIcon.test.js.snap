@@ -2,6 +2,7 @@
 
 exports[`SearchIcon should match snapshot 1`] = `
 <button
+  className="SearchIcon"
   onClick={[MockFunction]}
 >
   <i

@@ -16,4 +16,10 @@ describe('SearchIcon', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should show search bar when clicked', () => {
+    wrapper.find('.SearchIcon').simulate('click');
+
+    expect(toggleSearch).toHaveBeenCalled();
+  });
 });

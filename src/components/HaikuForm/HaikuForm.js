@@ -17,6 +17,10 @@ class HaikuForm extends Component {
     });
   }
 
+  handleSubmit = () => {
+    console.log('submit')
+  }
+
   // capture changes in local state
   // on submit:
     // give haiku an id and pass state to action 
@@ -30,7 +34,7 @@ class HaikuForm extends Component {
 
   render() {
     return (
-      <form className="HaikuForm">
+      <form className="HaikuForm" onSubmit={this.handleSubmit}>
         <label htmlFor="title-input">Title</label>
         <input 
           type="text" 

@@ -7,35 +7,59 @@ exports[`Menu should match snapshot 1`] = `
   <nav
     className="Menu-sidebar"
   >
-    <button
-      className="Menu-close-btn"
-      onClick={[MockFunction]}
+    <div
+      className="btn-holder"
     >
-      <i
-        className="fas fa-times"
-      />
-    </button>
-    <li>
-      <NavLink
+      <button
+        className="Menu-close-btn"
+        onClick={[MockFunction]}
+      >
+        <i
+          className="fas fa-times"
+        />
+      </button>
+    </div>
+    <h1>
+      <Link
         to="/"
       >
-        Home
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        to="/about"
+        Haikuit
+        <i
+          className="fas fa-feather-alt"
+        />
+      </Link>
+    </h1>
+    <ul
+      className="nav-list"
+    >
+      <li
+        onClick={[MockFunction]}
       >
-        About
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        to="/haikus"
+        <Link
+          to="/"
+        >
+          Home
+        </Link>
+      </li>
+      <li
+        onClick={[MockFunction]}
       >
-        Your Haikus
-      </NavLink>
-    </li>
+        <Link
+          to="/about"
+        >
+          About
+        </Link>
+      </li>
+      <li
+        onClick={[MockFunction]}
+      >
+        <Link
+          to="/haikus"
+        >
+          Your Haikus
+        </Link>
+      </li>
+    </ul>
   </nav>
 </section>
 `;

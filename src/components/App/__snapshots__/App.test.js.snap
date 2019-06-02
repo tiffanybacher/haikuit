@@ -5,6 +5,7 @@ exports[`App should match snapshot 1`] = `
   className="App"
 >
   <Header
+    menuShown={false}
     toggleMenu={[Function]}
   />
   <Route
@@ -33,6 +34,7 @@ exports[`App should match snapshot if menuShown is true 1`] = `
     toggleMenu={[Function]}
   />
   <Header
+    menuShown={true}
     toggleMenu={[Function]}
   />
   <Route

@@ -7,16 +7,33 @@ exports[`Header should match snapshot 1`] = `
   <div
     className="flex-container"
   >
-    <HamburgerIcon />
-    <h1>
-      Haikuit
+    <button
+      className="hamburger-icon"
+      onClick={[MockFunction]}
+    >
       <i
-        className="fas fa-feather-alt"
+        className="fas fa-bars"
       />
-    </h1>
-    <SearchIcon
-      toggleSearch={[Function]}
-    />
+    </button>
+    <Link
+      tabindex="-1"
+      to="/"
+    >
+      <h1>
+        Haikuit
+        <i
+          className="fas fa-feather-alt"
+        />
+      </h1>
+    </Link>
+    <button
+      className="search-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-search"
+      />
+    </button>
   </div>
 </header>
 `;
@@ -28,16 +45,33 @@ exports[`Header should render search bar if searchShown is true 1`] = `
   <div
     className="flex-container"
   >
-    <HamburgerIcon />
-    <h1>
-      Haikuit
+    <button
+      className="hamburger-icon"
+      onClick={[MockFunction]}
+    >
       <i
-        className="fas fa-feather-alt"
+        className="fas fa-bars"
       />
-    </h1>
-    <SearchIcon
-      toggleSearch={[Function]}
-    />
+    </button>
+    <Link
+      tabindex="-1"
+      to="/"
+    >
+      <h1>
+        Haikuit
+        <i
+          className="fas fa-feather-alt"
+        />
+      </h1>
+    </Link>
+    <button
+      className="search-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-search"
+      />
+    </button>
   </div>
   <input
     className="search-input"

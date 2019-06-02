@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Menu extends Component {
   render() {
@@ -10,8 +11,17 @@ class Menu extends Component {
             onClick={this.props.toggleMenu}>
             <i className="fas fa-times"></i>
           </button>
-          <li>About</li>
-          <li>Your Haikus</li>
+          <ul className="nav-list">
+            <li onClick={this.props.toggleMenu}>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li onClick={this.props.toggleMenu}>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li onClick={this.props.toggleMenu}>
+              <NavLink to="/haikus">Your Haikus</NavLink>
+            </li>
+          </ul>
         </nav>
       </section>
     );

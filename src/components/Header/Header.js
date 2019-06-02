@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import HamburgerIcon from '../HamburgerIcon/HamburgerIcon';
 import SearchIcon from '../SearchIcon/SearchIcon';
 
@@ -27,13 +29,17 @@ class Header extends Component {
       <header className="Header">
         <div className="flex-container">
           <HamburgerIcon toggleMenu={this.props.toggleMenu} />
-          <h1>Haikuit<i className="fas fa-feather-alt"></i></h1>
+          <h1><Link to="/">Haikuit<i className="fas fa-feather-alt"></i></Link></h1>
           <SearchIcon toggleSearch={this.toggleSearch} />
         </div>
         {this.renderSearch()}
       </header>
     );
   }
+}
+
+Header.propTypes = {
+  searchShown: PropTypes.bool
 }
 
 export default Header;

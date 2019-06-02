@@ -28,7 +28,9 @@ class App extends Component {
     return (
         <div className="App">
           {this.renderMenu()}
-          <Header toggleMenu={this.toggleMenu} />
+          <Header 
+            toggleMenu={this.toggleMenu} 
+            menuShown={this.state.menuShown} />
           <Route exact path="/" component={HomeContainer} />
           <Route exact path="/about" component={About} />
           <Route exact path="/haikus" component={HaikusContainer} />

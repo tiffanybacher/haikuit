@@ -3,10 +3,18 @@ import { shallow } from 'enzyme';
 import Header from './Header';
 
 describe('Header', () => {
+  let toggleMenu;
+  let menuShown;
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Header />);
+    toggleMenu = jest.fn();
+    menuShown = jest.fn();
+    wrapper = shallow(
+      <Header 
+        toggleMenu={this.toggleMenu} 
+        menuShown={this.state.menuShown} />
+    );
   });
 
   it('should match snapshot', () => {

@@ -4,12 +4,16 @@ import SearchIcon from './SearchIcon';
 
 describe('SearchIcon', () => {
   let toggleSearch;
+  let tabindex;
   let wrapper;
 
   beforeEach(() => {
     toggleSearch = jest.fn();
+    tabindex = jest.fn();
     wrapper = shallow(
-      <SearchIcon toggleSearch={toggleSearch}/>
+      <SearchIcon 
+        toggleSearch={toggleSearch}
+        tabindex={tabindex} />
     );
   });
 

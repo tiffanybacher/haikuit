@@ -7,14 +7,22 @@ exports[`Header should match snapshot 1`] = `
   <div
     className="flex-container"
   >
-    <HamburgerIcon />
+    <HamburgerIcon
+      tabindex="1"
+    />
     <h1>
-      Haikuit
-      <i
-        className="fas fa-feather-alt"
-      />
+      <Link
+        tabindex="1"
+        to="/"
+      >
+        Haikuit
+        <i
+          className="fas fa-feather-alt"
+        />
+      </Link>
     </h1>
     <SearchIcon
+      tabindex="1"
       toggleSearch={[Function]}
     />
   </div>
@@ -28,14 +36,22 @@ exports[`Header should render search bar if searchShown is true 1`] = `
   <div
     className="flex-container"
   >
-    <HamburgerIcon />
+    <HamburgerIcon
+      tabindex="1"
+    />
     <h1>
-      Haikuit
-      <i
-        className="fas fa-feather-alt"
-      />
+      <Link
+        tabindex="1"
+        to="/"
+      >
+        Haikuit
+        <i
+          className="fas fa-feather-alt"
+        />
+      </Link>
     </h1>
     <SearchIcon
+      tabindex="1"
       toggleSearch={[Function]}
     />
   </div>

@@ -4,12 +4,17 @@ import HamburgerIcon from './HamburgerIcon';
 
 describe('HamburgerIcon', () => {
   let toggleMenu;
+  let tabindex;
   let wrapper;
 
   beforeEach(() => {
     toggleMenu = jest.fn();
+    tabindex = jest.fn();
     wrapper = shallow(
-      <HamburgerIcon toggleMenu={toggleMenu} />);
+      <HamburgerIcon 
+        toggleMenu={toggleMenu} 
+        tabindex={tabindex} />
+    );
   });
 
   it('should match snapshot', () => {

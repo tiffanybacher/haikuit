@@ -4,7 +4,8 @@ function SearchIcon(props) {
   return (
     <button 
       className="SearchIcon" 
-      onClick={props.toggleSearch}>
+      onClick={props.toggleSearch}
+      tabindex={props.tabindex}>
       <i className="fas fa-search"></i>
     </button>
   );

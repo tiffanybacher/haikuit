@@ -4,6 +4,7 @@ exports[`HamburgerIcon should match snapshot 1`] = `
 <button
   className="HamburgerIcon"
   onClick={[MockFunction]}
+  tabindex={[MockFunction]}
 >
   <i
     className="fas fa-bars"

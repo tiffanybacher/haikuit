@@ -19,7 +19,9 @@ exports[`Menu should match snapshot 1`] = `
         />
       </button>
     </div>
-    <h1>
+    <h1
+      className="Menu-header"
+    >
       <Link
         to="/"
       >

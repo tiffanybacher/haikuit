@@ -38,7 +38,7 @@ exports[`Header should match snapshot 1`] = `
 </header>
 `;
 
-exports[`Header should render search bar if searchShown is true 1`] = `
+exports[`Header should match snapshot if searchShown is true 1`] = `
 <header
   className="Header"
 >

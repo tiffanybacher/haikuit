@@ -2,7 +2,7 @@
   background: $purple;
   color: white;
   margin: 0;
-  padding: 10px 15px 15px 15px;
+  padding: 10px 20px 15px 20px;
   text-align: center;
 
   a {
@@ -28,12 +28,30 @@
   }
 }
 
- h1 {
-    color: white;
-    font-family: 'Baloo', sans-serif;
-    font-size: 2.5em;
-    letter-spacing: 2px;
-    margin: 0 15px 15px 15px;
-    position: relative;
-    top: 10px;
+h1 {
+  color: white;
+  font-family: 'Baloo', sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  margin: 0 15px 15px 15px;
+  position: relative;
+  top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Header {
+    padding: 10px 50px 15px 50px;
   }
+}
+
+@media only screen and (min-width: 1000px) {
+  .Header {
+    padding: 10px 75px 15px 75px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Header {
+    padding: 10px 100px 15px 100px;
+  }
+}

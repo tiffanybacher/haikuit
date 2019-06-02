@@ -1,0 +1,35 @@
+.About {
+  background: white;
+  margin: 0;
+  padding: 20px;
+
+  .back-btn {
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  h2 {
+    margin: 40px 0 20px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .About {
+    font-size: 1.1em;
+    padding: 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .About {
+    font-size: 1.2em;
+    padding: 75px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .About {
+    font-size: 1.3em;
+    padding: 100px 250px;
+  }
+}

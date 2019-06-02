@@ -17,13 +17,24 @@ exports[`Menu should match snapshot 1`] = `
     </button>
     <li>
       <NavLink
+        to="/"
+      >
+        Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
         to="/about"
       >
         About
       </NavLink>
     </li>
     <li>
-      Your Haikus
+      <NavLink
+        to="/haikus"
+      >
+        Your Haikus
+      </NavLink>
     </li>
   </nav>
 </section>

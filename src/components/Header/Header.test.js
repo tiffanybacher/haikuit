@@ -12,8 +12,8 @@ describe('Header', () => {
     menuShown = jest.fn();
     wrapper = shallow(
       <Header 
-        toggleMenu={this.toggleMenu} 
-        menuShown={this.state.menuShown} />
+        toggleMenu={toggleMenu} 
+        menuShown={menuShown} />
     );
   });
 

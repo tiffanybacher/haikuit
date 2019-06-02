@@ -24,24 +24,18 @@ class Header extends Component {
       : null
   }
 
-  assignTabIndex = () => {
-    return this.props.menuShown
+  render() {
+    const tabindex = this.props.menuShown
       ? "-1"
       : "1"
-  }
-
-  render() {
-    const tabindex = this.assignTabIndex();
 
     return (
       <header className="Header">
         <div className="flex-container">
           <HamburgerIcon toggleMenu={this.props.toggleMenu} tabindex={tabindex} />
-          <h1>
-            <Link to="/" tabindex={tabindex}>
-              Haikuit<i className="fas fa-feather-alt"></i>
-            </Link>
-          </h1>
+          <Link to="/" tabindex={tabindex}>
+            <h1>Haikuit<i className="fas fa-feather-alt"></i></h1>
+          </Link>
           <SearchIcon toggleSearch={this.toggleSearch} tabindex={tabindex} />
         </div>
         {this.renderSearch()}

@@ -1,0 +1,37 @@
+.HaikuForm {
+  color: #CCC;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+
+  input {
+    border: 1px solid #DDD;
+    text-align: center;
+    margin: 5px 0 10px 0;
+    padding: 9px;
+
+    &::placeholder {
+      color: #CCC;
+    }
+  }
+
+  .HaikuForm-submit {
+    background-color: $purple;
+    color: white;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .HaikuForm {
+    input { 
+      margin: 5px 0 15px 0;
+    }
+
+    .HaikuForm-submit {
+      margin: 25px 0 0 0;
+    }
+  }
+}

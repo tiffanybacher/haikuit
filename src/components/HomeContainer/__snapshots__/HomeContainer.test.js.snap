@@ -4,8 +4,13 @@ exports[`HomeContainer should match snapshot 1`] = `
 <section
   className="HomeContainer"
 >
-  <p>
-    HOME CONTAINER
-  </p>
+  <div
+    className="home-card"
+  >
+    <h2>
+      Write a Haiku!
+    </h2>
+    <HaikuForm />
+  </div>
 </section>
 `;

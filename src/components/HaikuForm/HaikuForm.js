@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import * as actions from '../../actions';
+import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 class HaikuForm extends Component {
@@ -17,8 +19,10 @@ class HaikuForm extends Component {
     });
   }
 
-  handleSubmit = () => {
-    console.log('submit')
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.props.addHaiku({ ...this.state, id: Date.now() });
   }
 
   // capture changes in local state
@@ -39,22 +43,26 @@ class HaikuForm extends Component {
         <input 
           type="text" 
           id="title-input"
-          name="title" />
+          name="title"
+          onChange={this.handleChange} />
         <label htmlFor="line-1">Line 1 - 5 syllables</label>
         <input 
           type="text" 
           id="line-1-input"
-          name="line1" />
+          name="line1"
+          onChange={this.handleChange} />
         <label htmlFor="line-2">Line 2 - 7 syllables</label>
         <input 
           type="text" 
           id="line-2-input"
-          name="line2" />
+          name="line2"
+          onChange={this.handleChange} />
         <label htmlFor="line-3">Line 3 - 5 syllables</label>
         <input 
           type="text" 
           id="line-3-input"
-          name="line3" />
+          name="line3"
+          onChange={this.handleChange} />
         <button 
           className="HaikuForm-submit">
           Submit
@@ -64,9 +72,11 @@ class HaikuForm extends Component {
   }
 }
 
+export const mapDispatchToProps = (dispatch) => ({
+  addHaiku: (haiku) => dispatch(actions.addHaiku(haiku)) 
+});
 
-
-export default HaikuForm;
+export default connect(undefined, mapDispatchToProps)(HaikuForm);
 
 HaikuForm.propTypes = {
   title: PropTypes.string,

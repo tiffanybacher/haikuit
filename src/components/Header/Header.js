@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import HamburgerIcon from '../HamburgerIcon/HamburgerIcon';
 import SearchIcon from '../SearchIcon/SearchIcon';
 
@@ -34,6 +35,10 @@ class Header extends Component {
       </header>
     );
   }
+}
+
+Header.propTypes = {
+  searchShown: PropTypes.bool
 }
 
 export default Header;

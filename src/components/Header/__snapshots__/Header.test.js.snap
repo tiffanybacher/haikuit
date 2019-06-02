@@ -7,10 +7,14 @@ exports[`Header should match snapshot 1`] = `
   <div
     className="flex-container"
   >
-    <HamburgerIcon
-      tabindex="-1"
-      toggleMenu={[MockFunction]}
-    />
+    <button
+      className="hamburger-icon"
+      onClick={[MockFunction]}
+    >
+      <i
+        className="fas fa-bars"
+      />
+    </button>
     <Link
       tabindex="-1"
       to="/"
@@ -22,10 +26,14 @@ exports[`Header should match snapshot 1`] = `
         />
       </h1>
     </Link>
-    <SearchIcon
-      tabindex="-1"
-      toggleSearch={[Function]}
-    />
+    <button
+      className="search-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-search"
+      />
+    </button>
   </div>
 </header>
 `;
@@ -37,10 +45,14 @@ exports[`Header should render search bar if searchShown is true 1`] = `
   <div
     className="flex-container"
   >
-    <HamburgerIcon
-      tabindex="-1"
-      toggleMenu={[MockFunction]}
-    />
+    <button
+      className="hamburger-icon"
+      onClick={[MockFunction]}
+    >
+      <i
+        className="fas fa-bars"
+      />
+    </button>
     <Link
       tabindex="-1"
       to="/"
@@ -52,10 +64,14 @@ exports[`Header should render search bar if searchShown is true 1`] = `
         />
       </h1>
     </Link>
-    <SearchIcon
-      tabindex="-1"
-      toggleSearch={[Function]}
-    />
+    <button
+      className="search-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-search"
+      />
+    </button>
   </div>
   <input
     className="search-input"

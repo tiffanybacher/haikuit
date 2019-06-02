@@ -34,4 +34,18 @@ describe('Header', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should open menu drawer when hamburger btn is clicked', () => {
+    wrapper.find('.hamburger-icon').simulate('click');
+
+    expect(toggleMenu).toHaveBeenCalled();
+  });
+
+  it('should show search bar when search btn is clicked', () => {
+    expect(wrapper.state('searchShown')).toEqual(false);
+
+    wrapper.find('.search-icon').simulate('click');
+
+    expect(wrapper.state('searchShown')).toEqual(true);
+  });
 });

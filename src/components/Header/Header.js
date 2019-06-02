@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import HamburgerIcon from '../HamburgerIcon/HamburgerIcon';
-// import SearchIcon from '../SearchIcon/SearchIcon';
 
 class Header extends Component {
   state = {
@@ -32,12 +30,17 @@ class Header extends Component {
     return (
       <header className="Header">
         <div className="flex-container">
-          <HamburgerIcon toggleMenu={this.props.toggleMenu} tabindex={tabindex} />
+          <button 
+            className="hamburger-icon" 
+            onClick={this.props.toggleMenu}
+            tabindex={this.tabindex}>
+            <i className="fas fa-bars"></i>
+          </button>
           <Link to="/" tabindex={tabindex}>
             <h1>Haikuit<i className="fas fa-feather-alt"></i></h1>
           </Link>
           <button 
-            className="SearchIcon" 
+            className="search-icon" 
             onClick={this.toggleSearch}
             tabindex={this.tabindex}>
             <i className="fas fa-search"></i>

@@ -13,7 +13,9 @@ class Menu extends Component {
               <i className="fas fa-times"></i>
             </button>
           </div>
-          <h1><Link to="/">Haikuit<i className="fas fa-feather-alt"></i></Link></h1>
+          <h1 className="Menu-header">
+            <Link to="/">Haikuit<i className="fas fa-feather-alt"></i></Link>
+          </h1>
           <ul className="nav-list">
             <li onClick={this.props.toggleMenu}>
               <Link to="/">Home</Link>

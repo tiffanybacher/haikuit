@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
 import HomeContainer from '../HomeContainer/HomeContainer';
+import About from '../About/About';
 import HaikusContainer from '../HaikusContainer/HaikusContainer';
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
           {this.renderMenu()}
           <Header toggleMenu={this.toggleMenu} />
           <Route exact path="/" component={HomeContainer} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/haikus" component={HaikusContainer} />
         </div>
     );

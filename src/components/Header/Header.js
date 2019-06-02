@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import HamburgerIcon from '../HamburgerIcon/HamburgerIcon';
-import SearchIcon from '../SearchIcon/SearchIcon';
+// import SearchIcon from '../SearchIcon/SearchIcon';
 
 class Header extends Component {
   state = {
@@ -36,7 +36,12 @@ class Header extends Component {
           <Link to="/" tabindex={tabindex}>
             <h1>Haikuit<i className="fas fa-feather-alt"></i></h1>
           </Link>
-          <SearchIcon toggleSearch={this.toggleSearch} tabindex={tabindex} />
+          <button 
+            className="SearchIcon" 
+            onClick={this.toggleSearch}
+            tabindex={this.tabindex}>
+            <i className="fas fa-search"></i>
+          </button>
         </div>
         {this.renderSearch()}
       </header>

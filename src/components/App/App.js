@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
+import HomeContainer from '../HomeContainer/HomeContainer';
 
 class App extends Component {
   state = {
@@ -25,6 +27,7 @@ class App extends Component {
         <div className="App">
           {this.renderMenu()}
           <Header toggleMenu={this.toggleMenu} />
+          <Route path="/" component={HomeContainer} />
         </div>
     );
   }

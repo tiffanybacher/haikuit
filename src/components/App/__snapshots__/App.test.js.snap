@@ -7,6 +7,10 @@ exports[`App should match snapshot 1`] = `
   <Header
     toggleMenu={[Function]}
   />
+  <Route
+    component={[Function]}
+    path="/"
+  />
 </div>
 `;
 
@@ -19,6 +23,10 @@ exports[`App should match snapshot if menuShown is true 1`] = `
   />
   <Header
     toggleMenu={[Function]}
+  />
+  <Route
+    component={[Function]}
+    path="/"
   />
 </div>
 `;

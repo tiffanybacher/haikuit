@@ -10,7 +10,7 @@ exports[`HomeContainer should match snapshot 1`] = `
     <h2>
       Write a Haiku!
     </h2>
-    <HaikuForm />
+    <Connect(HaikuForm) />
   </div>
 </section>
 `;

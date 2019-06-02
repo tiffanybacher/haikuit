@@ -3,7 +3,7 @@ import * as actions from '../../actions';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
-class HaikuForm extends Component {
+export class HaikuForm extends Component {
   state = {
     title: '',
     line1: '',

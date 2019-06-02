@@ -11,8 +11,9 @@ class Menu extends Component {
             onClick={this.props.toggleMenu}>
             <i className="fas fa-times"></i>
           </button>
+          <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
-          <li>Your Haikus</li>
+          <li><NavLink to="/haikus">Your Haikus</NavLink></li>
         </nav>
       </section>
     );

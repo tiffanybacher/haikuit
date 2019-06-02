@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
 import HomeContainer from '../HomeContainer/HomeContainer';
+import HaikusContainer from '../HaikusContainer/HaikusContainer';
 
 class App extends Component {
   state = {
@@ -27,7 +28,8 @@ class App extends Component {
         <div className="App">
           {this.renderMenu()}
           <Header toggleMenu={this.toggleMenu} />
-          <Route path="/" component={HomeContainer} />
+          <Route exact path="/" component={HomeContainer} />
+          <Route exact path="/haikus" component={HaikusContainer} />
         </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { fetchWord } from '../../api/fetchWord';
 
 class Header extends Component {
   state = {
@@ -25,7 +26,8 @@ class Header extends Component {
   submitSearch = (e) => {
     e.preventDefault();
 
-    console.log('searchQuery:', this.state.searchQuery)
+    fetchWord(this.state.searchQuery)
+      .then(data => console.log(data));
   }
 
   renderSearch = () => {

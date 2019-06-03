@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as actions from '../../actions';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
 export class HaikuForm extends Component {

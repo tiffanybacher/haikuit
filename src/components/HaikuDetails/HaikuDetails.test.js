@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { HaikusContainer, mapStateToProps } from './HaikusContainer';
+import { HaikuDetails, mapStateToProps } from './HaikuDetails';
 
-describe('HaikusContainer', () => {
+describe('HaikuDetails', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<HaikusContainer />);
+    wrapper = shallow(<HaikuDetails />);
   });
 
   it('should match snapshot', () => {
@@ -15,9 +15,9 @@ describe('HaikusContainer', () => {
 
   describe('map state to props', () => {
     it('should map haikus to props', () => {
-      const mockState = { 
-        haikus: [{ title: 'title' }] 
-      }
+      const mockState = {
+        haikus: [{title: 'title'}]
+      };
       const result = mapStateToProps(mockState);
       const expected = { haikus: mockState.haikus };
 

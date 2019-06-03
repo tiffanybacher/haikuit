@@ -23,6 +23,11 @@ exports[`App should match snapshot 1`] = `
     exact={true}
     path="/haikus"
   />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/haiku/:id"
+  />
 </div>
 `;
 
@@ -51,6 +56,11 @@ exports[`App should match snapshot if menuShown is true 1`] = `
     component={[Function]}
     exact={true}
     path="/haikus"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/haiku/:id"
   />
 </div>
 `;

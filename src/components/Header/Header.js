@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 class Header extends Component {
   state = {
-    searchShown: false
+    searchShown: false,
+    searchQuery: ''
   }
 
   toggleSearch = () => {
@@ -13,12 +14,30 @@ class Header extends Component {
     });
   }
 
+  updateSearchQuery = (e) => {
+    const { value } = e.target;
+
+    this.setState({
+      searchQuery: value
+    });
+  }
+
+  submitSearch = (e) => {
+    e.preventDefault();
+
+    console.log('searchQuery:', this.state.searchQuery)
+  }
+
   renderSearch = () => {
     return this.state.searchShown 
-      ? <input 
-          type="text" 
-          className="search-input" 
-          placeholder="Search for a word..." />
+      ? <form onSubmit={this.submitSearch}>
+          <input 
+            type="text" 
+            className="search-input" 
+            placeholder="Search for a word..."
+            onChange={this.updateSearchQuery} />
+          <button className="search-btn">GO</button>
+        </form>
       : null
   }
 
@@ -53,7 +72,8 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  searchShown: PropTypes.bool
+  searchShown: PropTypes.bool,
+  searchQuery: PropTypes.string
 }
 
 export default Header;

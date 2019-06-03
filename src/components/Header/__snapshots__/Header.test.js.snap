@@ -73,10 +73,20 @@ exports[`Header should match snapshot if searchShown is true 1`] = `
       />
     </button>
   </div>
-  <input
-    className="search-input"
-    placeholder="Search for a word..."
-    type="text"
-  />
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="search-input"
+      onChange={[Function]}
+      placeholder="Search for a word..."
+      type="text"
+    />
+    <button
+      className="search-btn"
+    >
+      GO
+    </button>
+  </form>
 </header>
 `;

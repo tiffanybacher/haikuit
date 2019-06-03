@@ -48,4 +48,19 @@ describe('Header', () => {
 
     expect(wrapper.state('searchShown')).toEqual(true);
   });
+
+  it('should update searchQuery on change in search input', () => {
+    const mockEvent = { 
+      preventDefault: jest.fn(), 
+      target: { value: 'particular' } 
+    }
+
+    wrapper.setState({ searchShown: true });
+
+    expect(wrapper.state('searchQuery')).toEqual('');
+
+    wrapper.find('.search-input').simulate('change', mockEvent);
+
+    expect(wrapper.state('searchQuery')).toEqual('particular');
+  });
 });

@@ -11,10 +11,16 @@
   }
 
   .search-input {
-    @include border;
     font-style: italic;
     padding: 10px;
     width: 50%;
+  }
+
+  .search-btn {
+    background: #EEE;
+    color: $purple;
+    font-weight: 600;
+    padding: 12px;
   }
 
   .flex-container {

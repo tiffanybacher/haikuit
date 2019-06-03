@@ -6,6 +6,7 @@ import * as actions from '../../actions';
 describe('HaikuForm', () => {
   let mockHaiku;
   let addHaiku;
+  let redirect;
   let wrapper;
 
   beforeEach(() => {
@@ -16,7 +17,12 @@ describe('HaikuForm', () => {
       line3: 'It\'s just a haiku'
     }
     addHaiku = jest.fn();
-    wrapper = shallow(<HaikuForm addHaiku={addHaiku} />);
+    redirect = jest.fn();
+    wrapper = shallow(
+      <HaikuForm 
+        addHaiku={addHaiku} 
+        redirect={redirect} />
+    );
   });
 
   it('should match snapshot', () => {
@@ -35,7 +41,7 @@ describe('HaikuForm', () => {
     expect(wrapper.state('title')).toEqual('Haiku');
   });
 
-  it('should invoke addHaikus on submit', () => {
+  it('should invoke addHaikus and redirct on submit', () => {
     wrapper.setState(mockHaiku);
 
     const mockEvent = { preventDefault: jest.fn() }
@@ -43,6 +49,8 @@ describe('HaikuForm', () => {
     wrapper.find('.HaikuForm').simulate('submit', mockEvent);
 
     expect(addHaiku).toHaveBeenCalled();
+
+    expect(redirect).toHaveBeenCalled();
   });
 
   it('should map addHaiku to props', () => {

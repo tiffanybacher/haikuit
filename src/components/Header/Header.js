@@ -33,16 +33,16 @@ class Header extends Component {
           <button 
             className="hamburger-icon" 
             onClick={this.props.toggleMenu}
-            tabindex={this.tabindex}>
+            tabIndex={this.tabindex}>
             <i className="fas fa-bars"></i>
           </button>
-          <Link to="/" tabindex={tabindex}>
+          <Link to="/" tabIndex={tabindex}>
             <h1>Haikuit<i className="fas fa-feather-alt"></i></h1>
           </Link>
           <button 
             className="search-icon" 
             onClick={this.toggleSearch}
-            tabindex={this.tabindex}>
+            tabIndex={this.tabindex}>
             <i className="fas fa-search"></i>
           </button>
         </div>

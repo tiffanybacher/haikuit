@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HaikuForm should match snapshot 1`] = `
+<form
+  className="HaikuForm"
+  onSubmit={[Function]}
+>
+  <label
+    htmlFor="title-input"
+  >
+    Title
+  </label>
+  <input
+    id="title-input"
+    name="title"
+    onChange={[Function]}
+    type="text"
+  />
+  <label
+    htmlFor="line-1"
+  >
+    Line 1 - 5 syllables
+  </label>
+  <input
+    id="line-1-input"
+    name="line1"
+    onChange={[Function]}
+    type="text"
+  />
+  <label
+    htmlFor="line-2"
+  >
+    Line 2 - 7 syllables
+  </label>
+  <input
+    id="line-2-input"
+    name="line2"
+    onChange={[Function]}
+    type="text"
+  />
+  <label
+    htmlFor="line-3"
+  >
+    Line 3 - 5 syllables
+  </label>
+  <input
+    id="line-3-input"
+    name="line3"
+    onChange={[Function]}
+    type="text"
+  />
+  <button
+    className="HaikuForm-submit"
+  >
+    Submit
+  </button>
+</form>
+`;

@@ -29,7 +29,7 @@ describe('Header', () => {
     expect(wrapper.state('searchShown')).toBe(true);
   });
 
-  it('should render search bar if searchShown is true', () => {
+  it('should match snapshot if searchShown is true', () => {
     wrapper.setState({ searchShown: true });
 
     expect(wrapper).toMatchSnapshot();

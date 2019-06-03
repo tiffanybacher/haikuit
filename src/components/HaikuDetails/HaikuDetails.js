@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export class HaikusContainer extends Component {
+export class HaikuDetails extends Component {
   render() {
-    console.log(this.props);
+    console.log(this.props.haikus);
 
     return (
-      <section className="HaikusContainer">
-        <p>HAIKUS CONTAINER</p>
+      <section>
+        <h2>Haiku Details</h2>
       </section>
     );
   }
@@ -17,4 +17,4 @@ export const mapStateToProps = (state) => ({
   haikus: state.haikus
 });
 
-export default connect(mapStateToProps)(HaikusContainer);
+export default connect(mapStateToProps)(HaikuDetails);

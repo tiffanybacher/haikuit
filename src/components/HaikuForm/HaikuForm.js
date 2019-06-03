@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as actions from '../../actions';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
 export class HaikuForm extends Component {
@@ -22,7 +23,11 @@ export class HaikuForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    this.props.addHaiku({ ...this.state, id: Date.now() });
+    const id = Date.now();
+
+    this.props.addHaiku({ ...this.state, id });
+
+    this.props.redirect(`/haiku/${id}`);
   }
 
   // capture changes in local state
@@ -66,7 +71,7 @@ export class HaikuForm extends Component {
         <button 
           className="HaikuForm-submit">
           Submit
-        </button>
+       </button>
       </form>
     );
   }

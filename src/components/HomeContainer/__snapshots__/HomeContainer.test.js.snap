@@ -8,9 +8,19 @@ exports[`HomeContainer should match snapshot 1`] = `
     className="home-card"
   >
     <h2>
+      Your Lastest Haiku
+    </h2>
+    <Haiku />
+  </div>
+  <div
+    className="home-card"
+  >
+    <h2>
       Write a Haiku!
     </h2>
-    <Connect(HaikuForm) />
+    <Connect(HaikuForm)
+      redirect={[Function]}
+    />
   </div>
 </section>
 `;

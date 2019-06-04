@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchWord } from '../../api/fetchWord';
 
-class Header extends Component {
+export class Header extends Component {
   state = {
     searchShown: false,
     searchQuery: ''
@@ -26,8 +27,14 @@ class Header extends Component {
   submitSearch = (e) => {
     e.preventDefault();
 
-    fetchWord(this.state.searchQuery)
-      .then(data => console.log(data));
+    this.props.fetchWord(this.state.searchQuery);
+
+    // this.props.setLoading(true);
+
+    // fetchWord(this.state.searchQuery)
+    //   .then(data => console.log(data))
+    //   .then(() => this.props.setLoading(false))
+    //   .catch(error => console.log('error:', error));
   }
 
   renderSearch = () => {
@@ -73,9 +80,13 @@ class Header extends Component {
   }
 }
 
+export const mapDispatchToProps = (dispatch) => ({
+  fetchWord: (searchQuery) => dispatch(fetchWord(searchQuery))
+});
+
+export default connect(undefined, mapDispatchToProps)(Header);
+
 Header.propTypes = {
   searchShown: PropTypes.bool,
   searchQuery: PropTypes.string
 }
-
-export default Header;

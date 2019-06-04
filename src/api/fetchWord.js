@@ -1,22 +1,29 @@
-import { wordsApiKey } from './apiKeys'
+import { wordsApiKey } from './apiKeys';
+import * as actions from '../actions';
 
-export const fetchWord = async (searchQuery) => {
-  const url = `https://wordsapiv1.p.mashape.com/words/${searchQuery}`
-  const options = {
-    headers: { 'X-RapidAPI-Key': `${wordsApiKey}` }
-  }
-
-  try {
-    const response = await fetch(url, options);
-
-    if(!response.ok) {
-      throw Error(`"${searchQuery}" not found`);
+export const fetchWord = (searchQuery) => {
+  return async (dispatch) => {
+    const url = `https://wordsapiv1.p.mashape.com/words/${searchQuery}`
+    const options = {
+      headers: { 'X-RapidAPI-Key': `${wordsApiKey}` }
     }
-    
-    const data = await response.json();
 
-    return data;
-  } catch (error) {
-    console.log(error.message);
+    try {
+      dispatch(actions.setLoading(true));
+
+      const response = await fetch(url, options);
+
+      if(!response.ok) {
+        throw Error(`"${searchQuery}" not found`);
+      }
+      
+      const data = await response.json();
+
+      dispatch(actions.setLoading(false));
+
+      console.log(data);
+    } catch (error) {
+      dispatch(actions.setError(error.message));
+    }
   }
 }

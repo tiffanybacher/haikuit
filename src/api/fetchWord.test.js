@@ -1,5 +1,6 @@
 import { fetchWord } from './fetchWord';
 import { wordsApiKey } from './apiKeys';
+import * as actions from '../actions';
 
 describe('fetchWord', () => {
   let searchQuery;
@@ -7,6 +8,8 @@ describe('fetchWord', () => {
   let options;
   let mockData;
   let fetch;
+  let thunk;
+  let dispatch;
 
   beforeEach(() => {
     searchQuery = 'tenacity';

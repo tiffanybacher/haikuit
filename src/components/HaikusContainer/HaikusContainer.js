@@ -30,7 +30,6 @@ export class HaikusContainer extends Component {
           <BackBtn goBack={this.goBack} />
           <h2>YOUR HAIKUS</h2>
         </div>
-        <Haiku />
         {this.renderHaikuCards()}
       </section>
     );

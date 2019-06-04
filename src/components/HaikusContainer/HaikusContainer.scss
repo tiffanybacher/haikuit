@@ -1,32 +1,33 @@
 .HaikusContainer {
-  .haikus-header {
-    background: white;
-    margin: 0;
-    padding: 20px;
-  }
-
   h2 {
-    margin-bottom: 0;
+    margin: 10px 0 0;
+    text-align: center;
   }
+}
+
+.haikus-header {
+  background: white;
+  margin: 0;
+  padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .haikus-header {
     font-size: 1.1em;
-    padding: 30px 50px;
+    padding: 30px 50px 20px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .haikus-header {
     font-size: 1.2em;
-    padding: 40px 75px;
+    padding: 40px 75px 20px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .haikus-header {
     font-size: 1.3em;
-    padding: 50px 250px;
+    padding: 50px 250px 20px;
   }
 }

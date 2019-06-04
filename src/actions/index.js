@@ -18,3 +18,8 @@ export const setError = (message) => ({
   type: 'SET_ERROR',
   message
 });
+
+export const setLoading = (bool) => ({
+  type: 'SET_LOADING',
+  isLoading: bool
+});

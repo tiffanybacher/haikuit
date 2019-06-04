@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import BackBtn from '../BackBtn/BackBtn';
 
 export class HaikuDetails extends Component {
   render() {
-    console.log(this.props.haikus);
-
     return (
       <section>
         <h2>Haiku Details</h2>

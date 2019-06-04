@@ -1,0 +1,29 @@
+.HaikuDetails {
+  background: white;
+  padding: 20px;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .HaikuDetails {
+    font-size: 1.1em;
+    padding: 30px 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .HaikuDetails {
+    font-size: 1.2em;
+    padding: 40px 75px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .HaikuDetails {
+    font-size: 1.3em;
+    padding: 50px 250px;
+  }
+}

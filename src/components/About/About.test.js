@@ -17,7 +17,7 @@ describe('About', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should go back to previous page on click', () => {
+  it('should go back in history', () => {
     wrapper.instance().goBack();
 
     expect(mockHistory.goBack).toHaveBeenCalled();

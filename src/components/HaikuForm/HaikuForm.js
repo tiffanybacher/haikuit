@@ -5,10 +5,10 @@ import { PropTypes } from 'prop-types';
 
 export class HaikuForm extends Component {
   state = {
-    title: '',
-    line1: '',
-    line2: '',
-    line3: ''
+    title: this.props.title || '',
+    line1: this.props.line1 || '',
+    line2: this.props.line2 || '',
+    line3: this.props.line3 || ''
   }
 
   handleChange = (e) => {
@@ -48,24 +48,28 @@ export class HaikuForm extends Component {
           type="text" 
           id="title-input"
           name="title"
+          value={this.state.title}
           onChange={this.handleChange} />
         <label htmlFor="line-1">Line 1 - 5 syllables</label>
         <input 
           type="text" 
           id="line-1-input"
           name="line1"
+          value={this.state.line1}
           onChange={this.handleChange} />
         <label htmlFor="line-2">Line 2 - 7 syllables</label>
         <input 
           type="text" 
           id="line-2-input"
           name="line2"
+          value={this.state.line2}
           onChange={this.handleChange} />
         <label htmlFor="line-3">Line 3 - 5 syllables</label>
         <input 
           type="text" 
           id="line-3-input"
           name="line3"
+          value={this.state.line3}
           onChange={this.handleChange} />
         <button 
           className="HaikuForm-submit">

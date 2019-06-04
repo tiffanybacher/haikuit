@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchWord } from '../../api/fetchWord';
+import { fetchWord } from '../../apiCalls/fetchWord';
 
 export class Header extends Component {
   state = {
@@ -28,13 +28,6 @@ export class Header extends Component {
     e.preventDefault();
 
     this.props.fetchWord(this.state.searchQuery);
-
-    // this.props.setLoading(true);
-
-    // fetchWord(this.state.searchQuery)
-    //   .then(data => console.log(data))
-    //   .then(() => this.props.setLoading(false))
-    //   .catch(error => console.log('error:', error));
   }
 
   renderSearch = () => {

@@ -81,6 +81,19 @@ export class HaikuForm extends Component {
     this.props.redirect(`/haiku/${id}`);
   }
 
+  checkAllFields = () => {
+    const { line1, line2, line3 } = this.state;
+    let disabled;
+
+    if (line1 && line2 && line3) {
+      disabled = false;
+    } else {
+      disabled = true;
+    }
+
+    return disabled;
+  }
+
   render() {
     const { line1Syllables, line2Syllables, line3Syllables } = this.state;
 
@@ -148,7 +161,8 @@ export class HaikuForm extends Component {
         </button>
         <button 
           onClick={this.handleSubmit}
-          className="HaikuForm-submit">
+          className="HaikuForm-submit"
+          disabled={this.checkAllFields()}>
           Submit
        </button>
       </form>

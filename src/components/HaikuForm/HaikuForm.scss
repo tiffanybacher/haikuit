@@ -17,15 +17,23 @@
   }
 
   button {
-    background-color: $purple;
+    background: $purple;
     color: white;
     font-weight: 600;
     margin: 10px 0;
     padding: 10px;
+
+    &:hover {
+      background: rgba($purple, .7);
+    }
   }
 
   .HaikuForm-submit {
     margin-bottom: 20px;
+
+    &:disabled {
+      background: #CCC;
+    }
   }
 }
 

@@ -1,13 +1,17 @@
 .HomeContainer {
   .home-card {
     background: white;
-    margin: 20px 0;
-    padding: 20px 20px 0;
+    margin: 0 0 20px;
+    padding: 20px 20px 1px;
   }
 
   h2 {
     margin: 0;
     text-align: center;
+  }
+
+  .Haiku {
+    margin: 0;
   }
 }
 
@@ -25,15 +29,18 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  .home-card {
-    font-size: 1.2em;
-    padding: 40px 75px 1px;
+  .HomeContainer {
+    .home-card {
+      font-size: 1.2em;
+      padding: 40px 75px 1px;
+    }
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .home-card {
-    font-size: 1.3em;
-    padding: 50px 250px 1px;
+  .HomeContainer {
+    .home-card {
+      padding: 50px 100px 1px;
+    }
   }
 }

@@ -29,17 +29,6 @@ export class HaikuForm extends Component {
     this.props.redirect(`/haiku/${id}`);
   }
 
-  // capture changes in local state
-  // on submit:
-    // give haiku an id and pass state to action 
-      // use action to update haiku reducer
-    // go to /haiku/:id and display haiku details with matching id
-    // if press edit, then go to /haiku/:id/edit
-      // update local state 
-      // pass state to action to update haiku with matching id
-    // if press save then go /haiku/:id/confirmation
-  
-
   render() {
     return (
       <form className="HaikuForm" onSubmit={this.handleSubmit}>
@@ -71,6 +60,10 @@ export class HaikuForm extends Component {
           name="line3"
           value={this.state.line3}
           onChange={this.handleChange} />
+         <button 
+           className="HaikuForm-check">
+           Check Syllables
+        </button>
         <button 
           className="HaikuForm-submit">
           Submit

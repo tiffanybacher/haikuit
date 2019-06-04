@@ -9,9 +9,10 @@ class About extends Component {
   render() {
     return(
       <section className="About">
-        <div>
           <BackBtn goBack={this.goBack} />
           <h2>ABOUT</h2>
+          <div className="About-blurb">
+          
           <p>
             <b>Welcome to Haikuit!</b>
           </p>
@@ -25,7 +26,7 @@ class About extends Component {
           </p>
           <br />
           <p>Use Haikuit to easily keep track of syllables and to save all your haikus! Happy haikuing!</p>
-        </div>
+          </div>
       </section>
     );
   }

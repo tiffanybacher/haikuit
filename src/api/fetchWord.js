@@ -21,7 +21,7 @@ export const fetchWord = (searchQuery) => {
 
       dispatch(actions.setLoading(false));
 
-      console.log(data);
+      return data;
     } catch (error) {
       dispatch(actions.setError(error.message));
     }

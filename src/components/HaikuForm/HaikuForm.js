@@ -23,21 +23,24 @@ export class HaikuForm extends Component {
     });
   }
 
-  checkAllSyllables = (e) => {
+  handleCheckBtn = (e) => {
     e.preventDefault();
 
-    this.checkLineSyllables(1);
-    this.checkLineSyllables(2);
-    this.checkLineSyllables(3);
+    this.checkSyllables(1);
+    this.checkSyllables(2);
+    this.checkSyllables(3);
   }
 
-  checkLineSyllables = (num) => {
+  checkSyllables = (num) => {
     const line = this.findLine(num);
-    const lineArray = line.split(' ');
+    const lineArray = line.split(' ').filter(word => word !== '');
     let lineCount = 0;
 
     lineArray.forEach(word => {
-      this.props.fetchWord(word)
+      const punctuationless = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+      const newWord = punctuationless.replace(/\s{2,}/g," ");
+
+      this.props.fetchWord(newWord)
         .then(data => {
           if (data.syllables) {
             lineCount += data.syllables.count;
@@ -79,6 +82,8 @@ export class HaikuForm extends Component {
   }
 
   render() {
+    const { line1Syllables, line2Syllables, line3Syllables } = this.state;
+
     return (
       <form className="HaikuForm">
         <label htmlFor="title-input">Title</label>
@@ -88,21 +93,48 @@ export class HaikuForm extends Component {
           name="title"
           value={this.state.title}
           onChange={this.handleChange} />
-        <label htmlFor="line-1">Line 1 - 5 syllables</label>
+        <label 
+          htmlFor="line-1-input"
+          className={line1Syllables > 0 ? "hidden" : null}>
+          Line 1 - 5 syllables
+        </label>
+        <label 
+          htmlFor="line-1-input" 
+          className={line1Syllables === 0 ? "hidden" : null}>
+          <span className="syllable-label"> {line1Syllables} syllables</span>
+        </label>
         <input 
           type="text" 
           id="line-1-input"
           name="line1"
           value={this.state.line1}
           onChange={this.handleChange} />
-        <label htmlFor="line-2">Line 2 - 7 syllables</label>
+        <label 
+          htmlFor="line-2-input"
+          className={line2Syllables > 0 ? "hidden" : null}>
+          Line 2 - 7 syllables
+        </label>
+        <label 
+          htmlFor="line-2-input" 
+          className={line2Syllables === 0 ? "hidden" : null}>
+          <span className="syllable-label"> {line2Syllables} syllables</span>
+        </label>
         <input 
           type="text" 
           id="line-2-input"
           name="line2"
           value={this.state.line2}
           onChange={this.handleChange} />
-        <label htmlFor="line-3">Line 3 - 5 syllables</label>
+        <label 
+          htmlFor="line-3-input"
+          className={line3Syllables > 0 ? "hidden" : null}>
+          Line 3 - 5 syllables
+        </label>
+        <label 
+          htmlFor="line-3-input" 
+          className={line3Syllables === 0 ? "hidden" : null}>
+          <span className="syllable-label"> {line3Syllables} syllables</span>
+        </label>
         <input 
           type="text" 
           id="line-3-input"
@@ -110,7 +142,7 @@ export class HaikuForm extends Component {
           value={this.state.line3}
           onChange={this.handleChange} />
          <button 
-          onClick={this.checkAllSyllables}
+          onClick={this.handleCheckBtn}
           className="HaikuForm-check">
           Check Syllables
         </button>

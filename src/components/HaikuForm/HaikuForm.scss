@@ -29,6 +29,14 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.syllable-label {
+  color: black;
+}
+
 @media only screen and (min-width: 768px) {
   .HaikuForm {
     margin: 20px 0 0 0;

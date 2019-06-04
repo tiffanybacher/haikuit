@@ -7,18 +7,14 @@ export class HaikusContainer extends Component {
 
     return (
       <section className="HaikusContainer">
-        <p>HAIKUS CONTAINER</p>
+        <h2>Haikus Container</h2>
       </section>
     );
   }
 }
 
-export const mapStateToProps = (state) => {
-  console.log(state);
-  return { haikus: state.haikus }
-} 
-// ({
-//   haikus: state.haikus
-// });
+export const mapStateToProps = (state) => ({
+  haikus: state.haikus
+}); 
 
 export default connect(mapStateToProps)(HaikusContainer);

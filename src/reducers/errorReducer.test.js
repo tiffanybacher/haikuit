@@ -18,7 +18,6 @@ describe('errorReducer', () => {
     const message = 'Something went wrong';
     const action = actions.setError(message);
     const result = errorReducer(state, action);
-    const expected = message;
 
     expect(result).toEqual(message);
   });

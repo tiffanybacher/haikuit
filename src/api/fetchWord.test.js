@@ -59,7 +59,6 @@ describe('fetchWord', () => {
 
   it('should return a parsed response if response is okay', async () => {
     const result = await thunk(dispatch);
-    const expected = mockData;
 
     expect(result).toEqual(mockData);
   });

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BackBtn from '../BackBtn/BackBtn';
 
 class About extends Component {
   goBack = () => {
@@ -9,11 +10,7 @@ class About extends Component {
     return(
       <section className="About">
         <div>
-          <button 
-            className="back-btn" 
-            onClick={this.goBack}>
-            Back
-          </button>
+          <BackBtn goBack={this.goBack} />
           <h2>ABOUT</h2>
           <p>
             <b>Welcome to Haikuit!</b>

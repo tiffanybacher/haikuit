@@ -14,7 +14,7 @@ export class HaikusContainer extends Component {
 
     if (haikus.length) {
       haikuCards = haikus.map(haiku => {
-        return <Haiku {...haiku} />
+        return <Haiku {...haiku} key={haiku.id} />
       });
     } else {
       haikuCards = <Haiku />

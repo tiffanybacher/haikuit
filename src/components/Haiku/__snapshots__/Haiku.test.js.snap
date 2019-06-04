@@ -4,7 +4,9 @@ exports[`Haiku should match snapshot 1`] = `
 <article
   className="Haiku"
 >
-  <p>
+  <p
+    className="title"
+  >
     <b>
       A Haiku about no haikus
     </b>
@@ -12,7 +14,7 @@ exports[`Haiku should match snapshot 1`] = `
   <p
     className="line-1"
   >
-    You have no haikus.
+    You have no haikus!
   </p>
   <p
     className="line-2"

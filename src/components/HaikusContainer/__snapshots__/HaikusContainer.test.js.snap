@@ -4,8 +4,42 @@ exports[`HaikusContainer should match snapshot 1`] = `
 <section
   className="HaikusContainer"
 >
-  <p>
-    HAIKUS CONTAINER
-  </p>
+  <div
+    className="haikus-header"
+  >
+    <BackBtn
+      goBack={[Function]}
+    />
+    <h2>
+      YOUR HAIKUS
+    </h2>
+  </div>
+  <Haiku
+    id={111}
+    key="111"
+    title="Title"
+  />
+</section>
+`;
+
+exports[`HaikusContainer should match snapshot if no haikus exist 1`] = `
+<section
+  className="HaikusContainer"
+>
+  <div
+    className="haikus-header"
+  >
+    <BackBtn
+      goBack={[Function]}
+    />
+    <h2>
+      YOUR HAIKUS
+    </h2>
+  </div>
+  <Haiku
+    id={111}
+    key="111"
+    title="Title"
+  />
 </section>
 `;

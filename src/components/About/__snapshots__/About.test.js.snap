@@ -5,12 +5,9 @@ exports[`About should match snapshot 1`] = `
   className="About"
 >
   <div>
-    <button
-      className="back-btn"
-      onClick={[Function]}
-    >
-      Back
-    </button>
+    <BackBtn
+      goBack={[Function]}
+    />
     <h2>
       ABOUT
     </h2>

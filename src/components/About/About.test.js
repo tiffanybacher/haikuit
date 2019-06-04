@@ -18,7 +18,7 @@ describe('About', () => {
   });
 
   it('should go back to previous page on click', () => {
-    wrapper.find('.back-btn').simulate('click');
+    wrapper.instance().goBack();
 
     expect(mockHistory.goBack).toHaveBeenCalled();
   });

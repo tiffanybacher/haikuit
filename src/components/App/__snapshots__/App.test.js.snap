@@ -19,12 +19,28 @@ exports[`App should match snapshot 1`] = `
     path="/about"
   />
   <Route
-    component={[Function]}
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(HaikusContainer)",
+        "type": [Function],
+      }
+    }
     exact={true}
     path="/haikus"
   />
   <Route
-    component={[Function]}
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(HaikuDetails)",
+        "type": [Function],
+      }
+    }
     exact={true}
     path="/haiku/:id"
   />
@@ -53,12 +69,28 @@ exports[`App should match snapshot if menuShown is true 1`] = `
     path="/about"
   />
   <Route
-    component={[Function]}
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(HaikusContainer)",
+        "type": [Function],
+      }
+    }
     exact={true}
     path="/haikus"
   />
   <Route
-    component={[Function]}
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(HaikuDetails)",
+        "type": [Function],
+      }
+    }
     exact={true}
     path="/haiku/:id"
   />

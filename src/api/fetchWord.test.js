@@ -33,7 +33,6 @@ describe('fetchWord', () => {
         ok: false
       });
     });
-    
   });
 
   it('should return a parsed response if response is okay', async () => {

@@ -5,8 +5,8 @@ import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
 import HomeContainer from '../HomeContainer/HomeContainer';
 import About from '../About/About';
-import { HaikusContainer } from '../HaikusContainer/HaikusContainer';
-import { HaikuDetails } from '../HaikuDetails/HaikuDetails';
+import  HaikusContainer  from '../HaikusContainer/HaikusContainer';
+import  HaikuDetails  from '../HaikuDetails/HaikuDetails';
 
 class App extends Component {
   state = {

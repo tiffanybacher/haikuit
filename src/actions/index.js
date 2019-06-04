@@ -13,3 +13,8 @@ export const deleteHaiku = (id) => ({
   type: 'DELETE_HAIKU',
   id
 });
+
+export const setError = (message) => ({
+  type: 'SET_ERROR',
+  message
+});

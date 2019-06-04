@@ -13,8 +13,12 @@ export class HaikusContainer extends Component {
   }
 }
 
-export const mapStateToProps = (state) => ({
-  haikus: state.haikus
-});
+export const mapStateToProps = (state) => {
+  console.log(state);
+  return { haikus: state.haikus }
+} 
+// ({
+//   haikus: state.haikus
+// });
 
 export default connect(mapStateToProps)(HaikusContainer);

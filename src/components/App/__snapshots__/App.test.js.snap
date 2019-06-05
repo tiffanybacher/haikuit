@@ -8,63 +8,68 @@ exports[`App should match snapshot 1`] = `
     menuShown={false}
     toggleMenu={[Function]}
   />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(HomeContainer)",
-        "type": [Function],
+  <Switch>
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(HomeContainer)",
+          "type": [Function],
+        }
       }
-    }
-    exact={true}
-    path="/"
-  />
-  <Route
-    component={[Function]}
-    exact={true}
-    path="/about"
-  />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(HaikusContainer)",
-        "type": [Function],
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/about"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(HaikusContainer)",
+          "type": [Function],
+        }
       }
-    }
-    exact={true}
-    path="/haikus"
-  />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(EditHaiku)",
-        "type": [Function],
+      exact={true}
+      path="/haikus"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(EditHaiku)",
+          "type": [Function],
+        }
       }
-    }
-    exact={true}
-    path="/haiku/:id/edit"
-  />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(SavedHaiku)",
-        "type": [Function],
+      exact={true}
+      path="/haiku/:id/edit"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(SavedHaiku)",
+          "type": [Function],
+        }
       }
-    }
-    exact={true}
-    path="/haiku/:id/saved"
-  />
+      exact={true}
+      path="/haiku/:id/saved"
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
 </div>
 `;
 
@@ -79,62 +84,67 @@ exports[`App should match snapshot if menuShown is true 1`] = `
     menuShown={true}
     toggleMenu={[Function]}
   />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(HomeContainer)",
-        "type": [Function],
+  <Switch>
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(HomeContainer)",
+          "type": [Function],
+        }
       }
-    }
-    exact={true}
-    path="/"
-  />
-  <Route
-    component={[Function]}
-    exact={true}
-    path="/about"
-  />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(HaikusContainer)",
-        "type": [Function],
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/about"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(HaikusContainer)",
+          "type": [Function],
+        }
       }
-    }
-    exact={true}
-    path="/haikus"
-  />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(EditHaiku)",
-        "type": [Function],
+      exact={true}
+      path="/haikus"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(EditHaiku)",
+          "type": [Function],
+        }
       }
-    }
-    exact={true}
-    path="/haiku/:id/edit"
-  />
-  <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(SavedHaiku)",
-        "type": [Function],
+      exact={true}
+      path="/haiku/:id/edit"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(SavedHaiku)",
+          "type": [Function],
+        }
       }
-    }
-    exact={true}
-    path="/haiku/:id/saved"
-  />
+      exact={true}
+      path="/haiku/:id/saved"
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
 </div>
 `;

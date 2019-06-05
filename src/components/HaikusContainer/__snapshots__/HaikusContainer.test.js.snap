@@ -8,17 +8,22 @@ exports[`HaikusContainer should match snapshot 1`] = `
     className="haikus-header"
   >
     <BackBtn
-      goBack={[Function]}
+      goBack={[MockFunction]}
     />
     <h2>
       YOUR HAIKUS
     </h2>
   </div>
-  <Haiku
-    id={111}
+  <Link
     key="111"
-    title="Title"
-  />
+    to="/haiku/111/edit"
+  >
+    <Haiku
+      id={111}
+      key="111"
+      title="Title"
+    />
+  </Link>
 </section>
 `;
 
@@ -30,16 +35,21 @@ exports[`HaikusContainer should match snapshot if no haikus exist 1`] = `
     className="haikus-header"
   >
     <BackBtn
-      goBack={[Function]}
+      goBack={[MockFunction]}
     />
     <h2>
       YOUR HAIKUS
     </h2>
   </div>
-  <Haiku
-    id={111}
+  <Link
     key="111"
-    title="Title"
-  />
+    to="/haiku/111/edit"
+  >
+    <Haiku
+      id={111}
+      key="111"
+      title="Title"
+    />
+  </Link>
 </section>
 `;

@@ -2,7 +2,7 @@
 
 exports[`Haiku should match snapshot 1`] = `
 <article
-  className="Haiku"
+  className="no-hover Haiku"
 >
   <p
     className="title"

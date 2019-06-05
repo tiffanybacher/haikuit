@@ -80,7 +80,7 @@ export class HaikuForm extends Component {
 
     this.props.addHaiku({ ...this.state, id });
 
-    this.props.redirect(`/haiku/${id}`);
+    this.props.redirect(`/haiku/${id}/saved`);
   }
 
   checkAllFields = () => {

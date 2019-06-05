@@ -5,8 +5,9 @@ import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
 import HomeContainer from '../HomeContainer/HomeContainer';
 import About from '../About/About';
-import  HaikusContainer  from '../HaikusContainer/HaikusContainer';
-import  HaikuDetails  from '../HaikuDetails/HaikuDetails';
+import HaikusContainer from '../HaikusContainer/HaikusContainer';
+import HaikuDetails from '../HaikuDetails/HaikuDetails';
+import SavedHaiku from '../SavedHaiku/SavedHaiku';
 
 class App extends Component {
   state = {
@@ -36,6 +37,7 @@ class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/haikus" component={HaikusContainer} />
           <Route exact path="/haiku/:id" component={HaikuDetails} />
+          <Route exact path="/haiku/:id/saved" component={SavedHaiku} />
         </div>
     );
   }

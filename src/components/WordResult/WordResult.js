@@ -11,9 +11,10 @@ const WordResult = (props) => {
 
   return(
     <article className="WordResult">
-      <h4>{props.word}:
-        <span className="syllables"> {syllables} syllables</span>
-      </h4>
+      {!props.error && <h4>{props.word}:
+         <span className="syllables"> {syllables} syllables</span>
+      </h4>}
+      {props.error && <p>{props.error}</p>}
     </article>
   );
 }

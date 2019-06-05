@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchWord } from '../../apiCalls/fetchWord';
+import * as actions from '../../actions';
 import WordResult from '../WordResult/WordResult';
 
 export class Header extends Component {
@@ -32,6 +33,8 @@ export class Header extends Component {
 
   submitSearch = (e) => {
    e.preventDefault();
+
+   this.props.clearError();
 
    this.props.fetchWord(this.state.searchQuery)
     .then(data => this.setState({
@@ -66,9 +69,15 @@ export class Header extends Component {
   }
 
   renderResult = () => {
-    return this.state.currentResult && this.state.resultShown && this.state.searchShown
-      ? <WordResult {...this.state.currentResult} />
-      : null;
+    let result;
+
+    if (this.props.error) {
+      result = <WordResult error={this.props.error} />
+    } else if (this.state.currentResult && this.state.resultShown && this.state.searchShown) {
+      result = <WordResult {...this.state.currentResult} />
+    }
+
+    return result;
   }
 
   render() {
@@ -105,11 +114,16 @@ export class Header extends Component {
   }
 }
 
-export const mapDispatchToProps = (dispatch) => ({
-  fetchWord: (searchQuery) => dispatch(fetchWord(searchQuery))
+export const mapStateToProps = (state) => ({
+  error: state.error
 });
 
-export default connect(undefined, mapDispatchToProps)(Header);
+export const mapDispatchToProps = (dispatch) => ({
+  fetchWord: (searchQuery) => dispatch(fetchWord(searchQuery)),
+  clearError: () => dispatch(actions.clearError())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
 
 Header.propTypes = {
   searchShown: PropTypes.bool,

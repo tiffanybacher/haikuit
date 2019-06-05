@@ -19,6 +19,10 @@ export const setError = (message) => ({
   message
 });
 
+export const clearError = () => ({
+  type: 'CLEAR_ERROR'
+});
+
 export const setLoading = (bool) => ({
   type: 'SET_LOADING',
   isLoading: bool

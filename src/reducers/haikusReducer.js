@@ -16,6 +16,6 @@ export const haikusReducer = (state = [], action) => {
       return state.filter(haiku => haiku.id !== action.id);
 
     default:
-      return state
+      return state;
   }
 }

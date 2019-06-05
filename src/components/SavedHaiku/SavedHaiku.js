@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Haiku from '../Haiku/Haiku';
 
-class SavedHaiku extends Component {
+export class SavedHaiku extends Component {
   render() {
+    const id = parseInt(this.props.match.params.id);
+    const haiku = this.props.haikus.find(haiku => {
+      return haiku.id === id;
+    });
+
     return (
       <section className="SavedHaiku">
         <h2>Your Haiku is Saved!</h2>
+        <Haiku { ...haiku } />
       </section>
     );
   }
 }
 
-export default SavedHaiku;
+export const mapStoreToProps = (store) => ({
+  haikus: store.haikus
+});
+
+export default connect(mapStoreToProps)(SavedHaiku);

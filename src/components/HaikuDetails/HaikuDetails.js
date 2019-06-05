@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import BackBtn from '../BackBtn/BackBtn';
 import HaikuForm from '../HaikuForm/HaikuForm';
 
 export class HaikuDetails extends Component {
-  // goBack = () => {
-  //   this.props.history.goBack();
-  // }
-
   render() {
     const id = parseInt(this.props.match.params.id);
     const haiku = this.props.haikus.find(haiku => {

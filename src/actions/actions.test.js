@@ -40,4 +40,18 @@ describe('actions', () => {
 
     expect(result).toEqual(expected);
   });
+
+  it('should return a type of CLEAR_ERROR', () => {
+    const result = actions.clearError();
+    const expected = { type: 'CLEAR_ERROR' };
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should return a type of SET_LOADING and a boolean', () => {
+    const result = actions.setLoading(true);
+    const expected = { type: 'SET_LOADING', isLoading: true }
+
+    expect(result).toEqual(expected);
+  });
 });

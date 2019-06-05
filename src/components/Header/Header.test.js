@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Header, mapDispatchToProps } from './Header';
+import { Header, mapStateToProps, mapDispatchToProps } from './Header';
 import { fetchWord } from '../../apiCalls/fetchWord';
+import * as actions from '../../actions';
 
 jest.mock('../../apiCalls/fetchWord');
 
@@ -86,14 +87,38 @@ describe('Header', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should map fetchWord from dispatch to props', () => {
-    const mockDispatch = jest.fn();
-    const mockWord = 'tenacity';
-    const thunk = fetchWord(mockWord);
-    const props = mapDispatchToProps(mockDispatch);
+  it('should map error from state to props', () => {
+    const state = 'Error';
+    const result = mapStateToProps(state);
+    const expected = { error: state.error };
 
-    props.fetchWord(mockWord);
+    expect(result).toEqual(expected);
+  });
 
-    expect(mockDispatch).toHaveBeenCalledWith(thunk);
+  describe('map dispatch to props', () => {
+    let mockDispatch;
+
+    beforeEach(() => {
+      mockDispatch = jest.fn();
+    });
+
+    it('should map fetchWord from dispatch to props', () => {
+      const mockWord = 'tenacity';
+      const thunk = fetchWord(mockWord);
+      const props = mapDispatchToProps(mockDispatch);
+
+      props.fetchWord(mockWord);
+
+      expect(mockDispatch).toHaveBeenCalledWith(thunk);
+    });
+
+    it('should map clearError from dispatch to props', () => {
+      const action = actions.clearError();
+      const props = mapDispatchToProps(mockDispatch);
+
+      props.clearError();
+
+      expect(mockDispatch).toHaveBeenCalledWith(action);
+    });
   });
 });

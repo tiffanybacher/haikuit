@@ -21,4 +21,11 @@ describe('errorReducer', () => {
 
     expect(result).toEqual(message);
   });
+
+  it('should return an empty string', () => {
+    const action = actions.clearError();
+    const result = errorReducer(state, action);
+
+    expect(result).toEqual('');
+  });
 });

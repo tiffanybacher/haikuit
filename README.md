@@ -27,7 +27,7 @@ My personal learning goals of this project was to build and fully test an app ut
 • Jest & Enzyme
 • Webpack
 • ESLint
-
+ 
 ## Getting started
 
 ### `git clone https://github.com/tiffanybacher/haikuit.git`
@@ -41,6 +41,14 @@ run npm start to view it in your browser.
 
 ## API
 [WordsAPI](https://rapidapi.com/wordsapi/api/wordsapi)
+
+## Setting up the API key
+### Obtain a key from [WordsAPI](https://rapidapi.com/wordsapi/api/wordsapi).
+### Create a file named 'apiKeys.js' within src/apiCalls.
+### Create a exported variable named 'wordsApiKey' within 'apiKeys.js' and assign it your key.
+
+### src/apiCalls/apiKeys.js
+###   export const wordsApiKey = '[your key here]';
 
 ## Issue tracking and future enhancements
 https://github.com/tiffanybacher/haikuit/issues

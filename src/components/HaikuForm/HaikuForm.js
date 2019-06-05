@@ -37,7 +37,7 @@ export class HaikuForm extends Component {
     let lineCount = 0;
 
     lineArray.forEach(word => {
-      const punctuationless = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+      const punctuationless = word.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g,"");
       const newWord = punctuationless.replace(/\s{2,}/g," ");
 
       this.props.fetchWord(newWord)
@@ -112,7 +112,7 @@ export class HaikuForm extends Component {
     if (count === -1) {
       message = 'Spelling Error';
     } else {
-      message = ` ${count} syllables`;
+      message = `${count} syllables`;
     }
 
     return message;

@@ -3,10 +3,18 @@ import { shallow } from 'enzyme';
 import { HaikuDetails, mapStateToProps } from './HaikuDetails';
 
 describe('HaikuDetails', () => {
+  let mockMatch;
+  let mockHaikus;
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<HaikuDetails />);
+    mockMatch = { params: { id: 1} };
+    mockHaikus = [{ title: 'Title', id: 1 }];
+    wrapper = shallow(
+      <HaikuDetails 
+        match={mockMatch}
+        haikus={mockHaikus} />
+    );
   });
 
   it('should match snapshot', () => {

@@ -4,13 +4,15 @@ exports[`About should match snapshot 1`] = `
 <section
   className="About"
 >
-  <div>
-    <BackBtn
-      goBack={[Function]}
-    />
-    <h2>
-      ABOUT
-    </h2>
+  <BackBtn
+    goBack={[Function]}
+  />
+  <h2>
+    ABOUT
+  </h2>
+  <div
+    className="About-blurb"
+  >
     <p>
       <b>
         Welcome to Haikuit!

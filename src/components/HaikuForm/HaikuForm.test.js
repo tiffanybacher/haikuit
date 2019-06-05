@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { HaikuForm, mapDispatchToProps } from './HaikuForm';
 import * as actions from '../../actions';
+import { fetchWord } from '../../apiCalls/fetchWord';
 
 describe('HaikuForm', () => {
   let mockHaiku;
@@ -17,11 +18,12 @@ describe('HaikuForm', () => {
       line3: 'It\'s just a haiku'
     }
     addHaiku = jest.fn();
-    redirect = jest.fn();
+    redirect = jest.fn()
     wrapper = shallow(
       <HaikuForm 
         addHaiku={addHaiku} 
-        redirect={redirect} />
+        redirect={redirect}
+        fetchWord={fetchWord} />
     );
   });
 
@@ -41,16 +43,41 @@ describe('HaikuForm', () => {
     expect(wrapper.state('title')).toEqual('Haiku');
   });
 
-  it('should invoke addHaikus and redirct on submit', () => {
+  it('should find the right line according to the param', () => {
+    wrapper.setState({ ...mockHaiku });
+
+    const result = wrapper.instance().findLine(1);
+    const expected = 'This is a haiku';
+
+    expect(result).toEqual(expected);
+  });
+
+  it('should invoke addHaikus and redirect on submit', () => {
     wrapper.setState(mockHaiku);
 
     const mockEvent = { preventDefault: jest.fn() }
 
-    wrapper.find('.HaikuForm').simulate('submit', mockEvent);
+    wrapper.find('.HaikuForm-submit').simulate('click', mockEvent);
 
     expect(addHaiku).toHaveBeenCalled();
 
     expect(redirect).toHaveBeenCalled();
+  });
+
+  it('should disable button if not all fields have value', () => {
+    wrapper.setState({ line3: '' });
+
+    const result = wrapper.instance().checkAllFields();
+
+    expect(result).toEqual(true);
+  })
+
+  it('should enable button if all fields have value', () => {
+    wrapper.setState({ ...mockHaiku });
+
+    const result = wrapper.instance().checkAllFields();
+
+    expect(result).toEqual(false);
   });
 
   it('should map addHaiku to props', () => {

@@ -3,7 +3,6 @@
 exports[`HaikuForm should match snapshot 1`] = `
 <form
   className="HaikuForm"
-  onSubmit={[Function]}
 >
   <label
     htmlFor="title-input"
@@ -15,42 +14,87 @@ exports[`HaikuForm should match snapshot 1`] = `
     name="title"
     onChange={[Function]}
     type="text"
+    value=""
   />
   <label
-    htmlFor="line-1"
+    className={null}
+    htmlFor="line-1-input"
   >
     Line 1 - 5 syllables
+  </label>
+  <label
+    className="hidden"
+    htmlFor="line-1-input"
+  >
+    <span
+      className="syllable-label"
+    >
+      0 syllables
+    </span>
   </label>
   <input
     id="line-1-input"
     name="line1"
     onChange={[Function]}
     type="text"
+    value=""
   />
   <label
-    htmlFor="line-2"
+    className={null}
+    htmlFor="line-2-input"
   >
     Line 2 - 7 syllables
+  </label>
+  <label
+    className="hidden"
+    htmlFor="line-2-input"
+  >
+    <span
+      className="syllable-label"
+    >
+      0 syllables
+    </span>
   </label>
   <input
     id="line-2-input"
     name="line2"
     onChange={[Function]}
     type="text"
+    value=""
   />
   <label
-    htmlFor="line-3"
+    className={null}
+    htmlFor="line-3-input"
   >
     Line 3 - 5 syllables
+  </label>
+  <label
+    className="hidden"
+    htmlFor="line-3-input"
+  >
+    <span
+      className="syllable-label"
+    >
+      0 syllables
+    </span>
   </label>
   <input
     id="line-3-input"
     name="line3"
     onChange={[Function]}
     type="text"
+    value=""
   />
   <button
+    className="HaikuForm-check"
+    onClick={[Function]}
+  >
+    Check Syllables
+  </button>
+  <button
     className="HaikuForm-submit"
+    disabled={true}
+    onClick={[Function]}
   >
     Submit
   </button>

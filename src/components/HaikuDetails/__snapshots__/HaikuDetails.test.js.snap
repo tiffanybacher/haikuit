@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HaikuDetails should match snapshot 1`] = `
-<section>
+<section
+  className="HaikuDetails"
+>
   <h2>
-    Haiku Details
+    Edit Your Haiku
   </h2>
+  <Connect(HaikuForm)
+    id={1}
+    title="Title"
+  />
 </section>
 `;

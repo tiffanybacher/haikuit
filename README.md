@@ -7,7 +7,7 @@ The goal of this project was to create a simple app that could help users write 
 My personal learning goals of this project was to build and fully test an app utilzing React, Redux, Router, and thunx.
 
 ## Screenshots
-<img width="372" alt="Screen Shot 2019-06-05 at 3 01 50 AM" src="https://user-images.githubusercontent.com/46252038/58944188-8922eb80-873e-11e9-9c00-2138906a1733.png">
+<img width="372" alt="Screen Shot 2019-06-05 at 3 04 51 AM" src="https://user-images.githubusercontent.com/46252038/58944279-bb344d80-873e-11e9-93f5-272777930463.png">
 <img width="367" alt="Screen Shot 2019-06-05 at 2 34 00 AM" src="https://user-images.githubusercontent.com/46252038/58943842-d9e61480-873d-11e9-9ad6-25bb9392c41a.png">
 <img width="367" alt="Screen Shot 2019-06-05 at 2 29 51 AM" src="https://user-images.githubusercontent.com/46252038/58943834-d3579d00-873d-11e9-84c6-d5fb9cbbbfb9.png">
 <img width="367" alt="Screen Shot 2019-06-05 at 2 33 25 AM" src="https://user-images.githubusercontent.com/46252038/58943840-d5b9f700-873d-11e9-92d2-a9cd4447da85.png">

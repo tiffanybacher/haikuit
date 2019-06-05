@@ -10,9 +10,9 @@ export class HaikuForm extends Component {
     line1: this.props.line1 || '',
     line2: this.props.line2 || '',
     line3: this.props.line3 || '',
-    line1Syllables: 0,
-    line2Syllables: 0,
-    line3Syllables: 0,
+    line1Syllables: this.props.line1Syllables || 0,
+    line2Syllables: this.props.line2Syllables || 0,
+    line3Syllables: this.props.line3Syllables || 0,
   }
 
   handleChange = (e) => {
@@ -75,10 +75,17 @@ export class HaikuForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    let id;
 
-    const id = Date.now();
+    if (this.props.path === '/haiku/:id/edit') {
+      id = this.props.id;
 
-    this.props.addHaiku({ ...this.state, id });
+      this.props.editHaiku({ ...this.state, id });
+    } else {
+      id = Date.now();
+
+      this.props.addHaiku({ ...this.state, id });
+    }
 
     this.props.redirect(`/haiku/${id}/saved`);
   }
@@ -187,7 +194,7 @@ export class HaikuForm extends Component {
           onClick={this.handleSubmit}
           className="HaikuForm-submit"
           disabled={this.checkAllFields()}>
-          Submit
+          Save
        </button>
       </form>
     );
@@ -196,6 +203,7 @@ export class HaikuForm extends Component {
 
 export const mapDispatchToProps = (dispatch) => ({
   addHaiku: (haiku) => dispatch(actions.addHaiku(haiku)),
+  editHaiku: (haiku) => dispatch(actions.editHaiku(haiku)),
   fetchWord: (word) => dispatch(fetchWord(word))
 });
 
@@ -209,4 +217,5 @@ HaikuForm.propTypes = {
   line1Syllables: PropTypes.number,
   line2Syllables: PropTypes.number,
   line3Syllables: PropTypes.number,
+  id: PropTypes.number
 }

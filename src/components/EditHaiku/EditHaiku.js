@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 import HaikuForm from '../HaikuForm/HaikuForm';
 
 export class EditHaiku extends Component {
+  redirect = (path) => {
+    this.props.history.push(path)
+  }
+
   render() {
+    console.log(this.props)
     const id = parseInt(this.props.match.params.id);
     const haiku = this.props.haikus.find(haiku => {
       return haiku.id === id;
@@ -12,7 +17,10 @@ export class EditHaiku extends Component {
     return (
       <section className="EditHaiku">
         <h2>Edit Your Haiku</h2>
-        <HaikuForm {...haiku} />
+        <HaikuForm 
+          {...haiku} 
+          path={this.props.match.path}
+          redirect={this.redirect} />
       </section>
     );
   }

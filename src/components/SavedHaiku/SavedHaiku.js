@@ -4,11 +4,6 @@ import { connect } from 'react-redux';
 import Haiku from '../Haiku/Haiku';
 
 export class SavedHaiku extends Component {
-
-  seeAllClick = () => {
-
-  }
-
   render() {
     const id = parseInt(this.props.match.params.id);
     const haiku = this.props.haikus.find(haiku => {

@@ -75,6 +75,7 @@ export class HaikuForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
     let id;
 
     if (this.props.path === '/haiku/:id/edit') {
@@ -140,7 +141,7 @@ export class HaikuForm extends Component {
     return btn;
   }
 
-  handleDelete = (e) => {
+ handleDelete = (e) => {
     e.preventDefault();
 
     const id = parseInt(this.props.id);
@@ -253,6 +254,5 @@ HaikuForm.propTypes = {
   line3: PropTypes.string,
   line1Syllables: PropTypes.number,
   line2Syllables: PropTypes.number,
-  line3Syllables: PropTypes.number,
-  id: PropTypes.number
+  line3Syllables: PropTypes.number
 }

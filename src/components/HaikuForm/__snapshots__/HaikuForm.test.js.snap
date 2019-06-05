@@ -96,7 +96,13 @@ exports[`HaikuForm should match snapshot 1`] = `
     disabled={true}
     onClick={[Function]}
   >
-    Submit
+    Save
+  </button>
+  <button
+    className="delete-btn"
+    onClick={[Function]}
+  >
+    Delete This Haiku
   </button>
 </form>
 `;

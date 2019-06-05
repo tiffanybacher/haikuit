@@ -13,6 +13,10 @@ export class SavedHaiku extends Component {
       <section className="SavedHaiku">
         <h2>Your Haiku is Saved!</h2>
         <Haiku { ...haiku } />
+        <div className="btn-container">
+          <button>Edit</button>
+          <button>See All Haikus</button>
+        </div>
       </section>
     );
   }

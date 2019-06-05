@@ -3,16 +3,22 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchWord } from '../../apiCalls/fetchWord';
+import WordResult from '../WordResult/WordResult';
 
 export class Header extends Component {
   state = {
     searchShown: false,
-    searchQuery: ''
+    searchQuery: '',
+    resultShown: false,
+    currentResult: null
   }
 
   toggleSearch = () => {
     this.setState({
-      searchShown: !this.state.searchShown
+      searchShown: !this.state.searchShown,
+      searchQuery: '',
+      resultShown: !this.state.resultShown,
+      currentResult: null
     });
   }
 
@@ -25,24 +31,44 @@ export class Header extends Component {
   }
 
   submitSearch = (e) => {
-    e.preventDefault();
+   e.preventDefault();
 
-    const data = this.props.fetchWord(this.state.searchQuery);
+   this.props.fetchWord(this.state.searchQuery)
+    .then(data => this.setState({
+      currentResult: data,
+      resultShown: true
+    }));
+  }
 
-    console.log(data);
+  handleClear = () => {
+    this.setState({
+      searchQuery: '',
+      currentResult: null
+    });
   }
 
   renderSearch = () => {
     return this.state.searchShown 
-      ? <form onSubmit={this.submitSearch}>
-          <input 
-            type="text" 
-            className="search-input" 
-            placeholder="Search for a word..."
-            onChange={this.updateSearchQuery} />
-          <button className="search-btn">GO</button>
-        </form>
-      : null
+      ? <div className="search-bar">
+          <form onSubmit={this.submitSearch}>
+            <input 
+              type="text" 
+              className="search-input" 
+              placeholder="Search for a word..."
+              value={this.state.searchQuery}
+              onChange={this.updateSearchQuery} />
+          </form>
+          <button onClick={this.handleClear} className="search-btn">
+            <i className="fas fa-times"></i>
+          </button>
+        </div>
+      : null;
+  }
+
+  renderResult = () => {
+    return this.state.currentResult && this.state.resultShown && this.state.searchShown
+      ? <WordResult {...this.state.currentResult} />
+      : null;
   }
 
   render() {
@@ -51,6 +77,7 @@ export class Header extends Component {
       : "1"
 
     return (
+      <div>
       <header className="Header">
         <div className="flex-container">
           <button 
@@ -70,7 +97,10 @@ export class Header extends Component {
           </button>
         </div>
         {this.renderSearch()}
+        {this.renderResult()}
       </header>
+        
+      </div>
     );
   }
 }
@@ -83,5 +113,7 @@ export default connect(undefined, mapDispatchToProps)(Header);
 
 Header.propTypes = {
   searchShown: PropTypes.bool,
-  searchQuery: PropTypes.string
+  searchQuery: PropTypes.string,
+  resultShown: PropTypes.bool,
+  currentResult: PropTypes.object
 }

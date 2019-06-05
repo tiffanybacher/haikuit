@@ -15,8 +15,12 @@ export class SavedHaiku extends Component {
         <h2>Your Haiku is Saved!</h2>
         <Haiku { ...haiku } />
         <div className="btn-container">
-          <button><Link to={`/haiku/${id}/edit`}>Edit</Link></button>
-          <button><Link to={'/haikus'}>See All Haikus</Link></button>
+          <button>
+            <Link to={`/haiku/${id}/edit`} className="edit-btn">Edit</Link>
+          </button>
+          <button>
+            <Link to={'/haikus'} className="see-all-btn">See All Haikus</Link>
+          </button>
         </div>
       </section>
     );

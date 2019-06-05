@@ -29,6 +29,14 @@
     color: white;
     text-decoration: none;
   }
+
+  .edit-btn {
+    padding: 10px 115px;
+  }
+
+  .see-all-btn {
+    padding: 10px 75px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -55,11 +63,27 @@
   .SavedHaiku {
     font-size: 1.2em;
     padding: 40px 75px;
+
+    .edit-btn {
+      padding: 10px 160px;
+    }
+
+    .see-all-btn {
+      padding: 10px 115px;
+    }
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .SavedHaiku {
     padding: 50px 100px;
+
+    .edit-btn {
+      padding: 10px 190px;
+    }
+
+    .see-all-btn {
+      padding: 10px 145px;
+    }
   }
 }

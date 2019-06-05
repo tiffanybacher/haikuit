@@ -125,6 +125,38 @@ export class HaikuForm extends Component {
     return message;
   }
 
+  renderDeleteBtn = () => {
+    let btn;
+
+    if (this.props.path === '/haiku/:id/edit') {
+      btn = 
+        <button 
+          className="delete-btn"
+          onClick={this.handleDelete}>
+          Delete This Haiku
+        </button>
+    }
+
+    return btn;
+  }
+
+  handleDelete = (e) => {
+    e.preventDefault();
+
+    const id = parseInt(this.props.id);
+
+    this.props.deleteHaiku(id);
+
+    this.setState({ 
+      title: '*** THIS HAIKU WAS DELETED ***',
+      line1: '',
+      line2: '',
+      line3: ''
+    });
+
+    setTimeout(() => this.props.redirect('/'), 3000);
+  }
+
   render() {
     const { line1Syllables, line2Syllables, line3Syllables } = this.state;
 
@@ -196,6 +228,7 @@ export class HaikuForm extends Component {
           disabled={this.checkAllFields()}>
           Save
        </button>
+       {this.renderDeleteBtn()}
       </form>
     );
   }
@@ -204,6 +237,7 @@ export class HaikuForm extends Component {
 export const mapDispatchToProps = (dispatch) => ({
   addHaiku: (haiku) => dispatch(actions.addHaiku(haiku)),
   editHaiku: (haiku) => dispatch(actions.editHaiku(haiku)),
+  deleteHaiku: (id) => dispatch(actions.deleteHaiku(id)),
   fetchWord: (word) => dispatch(fetchWord(word))
 });
 

@@ -2,6 +2,19 @@
   h2 {
     margin: 20px 0 0;
   }
+
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .Haiku:hover {
+    background: $purple;
+  }
 }
 
 .haikus-header {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Haiku from '../Haiku/Haiku';
 import BackBtn from '../BackBtn/BackBtn';
@@ -14,7 +15,11 @@ export class HaikusContainer extends Component {
 
     if (haikus.length) {
       haikuCards = haikus.map(haiku => {
-        return <Haiku {...haiku} key={haiku.id} />
+        return (
+          <Link to={`/haiku/${haiku.id}/edit`}>
+            <Haiku {...haiku} key={haiku.id} />
+          </Link>
+        );
       });
     } else {
       haikuCards = <Haiku />

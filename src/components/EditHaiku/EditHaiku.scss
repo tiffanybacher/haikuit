@@ -5,6 +5,15 @@
   h2 {
     margin-top: 0;
   }
+
+  .delete-btn {
+    background: darkred;
+    margin-top: 0px;
+
+    &:hover {
+      background: rgba($purple, .7);
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {

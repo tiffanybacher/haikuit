@@ -15,6 +15,10 @@
   .Haiku:hover {
     background: $purple;
   }
+
+  .no-hover:hover {
+    background: white;
+  }
 }
 
 .haikus-header {

@@ -11,6 +11,7 @@ export const SavedHaiku = (props) => {
 
   return (
     <section className="SavedHaiku">
+      <Link to="/" className="back-home-btn">Back Home</Link>
       <h2>Your Haiku is Saved!</h2>
       <Haiku { ...haiku } />
       <div className="btn-container">

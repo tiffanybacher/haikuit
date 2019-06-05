@@ -3,7 +3,6 @@
   padding: 20px;
 
   h2 {
-    margin-top: 0;
     text-align: center;
   }
 
@@ -36,6 +35,12 @@
 
   .see-all-btn {
     padding: 10px 75px;
+  }
+
+  .back-home-btn {
+    color: black;
+    font-style: italic;
+    text-decoration: underline;
   }
 }
 

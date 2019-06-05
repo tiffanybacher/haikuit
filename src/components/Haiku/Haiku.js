@@ -11,7 +11,7 @@ const Haiku = (props) => {
   }
 
   return (
-    <article className="Haiku">
+    <article className={!props.id ? "no-hover Haiku" : "Haiku"}>
       <p className="title"><b>{title}</b></p>
       <p className="line-1">{line1}</p>
       <p className="line-2">{line2}</p>

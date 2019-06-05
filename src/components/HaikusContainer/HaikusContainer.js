@@ -16,7 +16,7 @@ export class HaikusContainer extends Component {
     if (haikus.length) {
       haikuCards = haikus.map(haiku => {
         return (
-          <Link to={`/haiku/${haiku.id}/edit`}>
+          <Link to={`/haiku/${haiku.id}/edit`} key={haiku.id}>
             <Haiku {...haiku} key={haiku.id} />
           </Link>
         );

@@ -1,7 +1,7 @@
 # Haikuit
 
 ## Description
-The goal of this project was to create a simple app that could help users write Haikus by tracking syllables.
+The goal of this project was to create a simple app that could help users write Haikus. Users can either keep track of syllables of syllables in each line of their haiku or they can search a word to find the number of syllables in any word!
 
 ## Learning Goals
 My personal learning goals of this project was to build and fully test an app utilzing React, Redux, Router, and thunx.
@@ -38,6 +38,9 @@ run npm install to install dependencies.
 
 ### `npm start`
 run npm start to view it in your browser.
+
+## API
+[WordsAPI](https://rapidapi.com/wordsapi/api/wordsapi)
 
 ## Issue tracking and future enhancements
 https://github.com/tiffanybacher/haikuit/issues

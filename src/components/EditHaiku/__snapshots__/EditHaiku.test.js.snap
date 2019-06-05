@@ -9,6 +9,7 @@ exports[`EditHaiku should match snapshot 1`] = `
   </h2>
   <Connect(HaikuForm)
     id={1}
+    redirect={[Function]}
     title="Title"
   />
 </section>

@@ -8,7 +8,6 @@ export class EditHaiku extends Component {
   }
 
   render() {
-    console.log(this.props)
     const id = parseInt(this.props.match.params.id);
     const haiku = this.props.haikus.find(haiku => {
       return haiku.id === id;

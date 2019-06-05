@@ -5,16 +5,25 @@ import { EditHaiku, mapStateToProps } from './EditHaiku';
 describe('EditHaiku', () => {
   let mockMatch;
   let mockHaikus;
+  let mockHistory;
   let wrapper;
 
   beforeEach(() => {
     mockMatch = { params: { id: 1} };
     mockHaikus = [{ title: 'Title', id: 1 }];
+    mockHistory = [];
     wrapper = shallow(
       <EditHaiku 
         match={mockMatch}
-        haikus={mockHaikus} />
+        haikus={mockHaikus}
+        history={mockHistory} />
     );
+  });
+
+  it('should direct to /haiku/:id', () => {
+    wrapper.instance().redirect('/haiku/3');
+
+    expect(mockHistory).toEqual(['/haiku/3']);
   });
 
   it('should match snapshot', () => {

@@ -12,7 +12,7 @@ class About extends Component {
           <BackBtn goBack={this.goBack} />
           <h2>ABOUT</h2>
           <div className="About-blurb">
-          
+
           <p>
             <b>Welcome to Haikuit!</b>
           </p>
@@ -25,7 +25,7 @@ class About extends Component {
             Haiku is a traditional form of Japanese poetry. They consist of 3 lines. The content can anything! However, the first line is always 5 syllables, the second is 7 syllables, and the third is 5 syllables again. Haikus also rarely ryhyme.
           </p>
           <br />
-          <p>Use Haikuit to easily keep track of syllables and to save all your haikus! Happy haikuing!</p>
+          <p>Use Haikuit to easily check your syllables and to save all your haikus! Happy haikuing!</p>
           </div>
       </section>
     );

@@ -27,7 +27,9 @@ export class Header extends Component {
   submitSearch = (e) => {
     e.preventDefault();
 
-    this.props.fetchWord(this.state.searchQuery);
+    const data = this.props.fetchWord(this.state.searchQuery);
+
+    console.log(data);
   }
 
   renderSearch = () => {

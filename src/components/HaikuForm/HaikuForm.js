@@ -151,7 +151,10 @@ export class HaikuForm extends Component {
       title: '*** THIS HAIKU WAS DELETED ***',
       line1: '',
       line2: '',
-      line3: ''
+      line3: '',
+      line1Syllables: 0,
+      line2Syllables: 0,
+      line3Syllables: 0
     });
 
     setTimeout(() => this.props.redirect('/'), 3000);

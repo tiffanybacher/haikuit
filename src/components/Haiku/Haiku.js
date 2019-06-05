@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Haiku(props) {
+const Haiku = (props) => {
   let { title, line1, line2, line3 } = props;
 
   if (!props.id) {

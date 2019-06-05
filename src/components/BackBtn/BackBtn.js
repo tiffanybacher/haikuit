@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class BackBtn extends Component {
-  render() {
-    return (
-      <button 
-        className="back-btn" 
-        onClick={this.props.goBack}>
-        Back
-      </button>
-    );
-  }
+const BackBtn = (props) => {
+  return (
+    <button 
+      className="back-btn" 
+      onClick={props.goBack}>
+      Back
+    </button>
+  );
 }
 
 export default BackBtn;

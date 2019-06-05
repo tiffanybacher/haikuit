@@ -5,7 +5,7 @@ exports[`About should match snapshot 1`] = `
   className="About"
 >
   <BackBtn
-    goBack={[Function]}
+    goBack={[MockFunction]}
   />
   <h2>
     ABOUT

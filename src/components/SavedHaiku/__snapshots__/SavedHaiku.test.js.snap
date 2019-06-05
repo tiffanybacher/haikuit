@@ -4,6 +4,12 @@ exports[`SavedHaiku should match snapshot 1`] = `
 <section
   className="SavedHaiku"
 >
+  <Link
+    className="back-home-btn"
+    to="/"
+  >
+    Back Home
+  </Link>
   <h2>
     Your Haiku is Saved!
   </h2>

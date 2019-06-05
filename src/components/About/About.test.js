@@ -16,10 +16,4 @@ describe('About', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should go back in history', () => {
-    wrapper.instance().goBack();
-
-    expect(mockHistory.goBack).toHaveBeenCalled();
-  });
 });

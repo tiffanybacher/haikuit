@@ -21,12 +21,6 @@ describe('HaikusContainer', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should go back in history', () =>{
-    wrapper.instance().goBack();
-
-    expect(history.goBack).toHaveBeenCalled();
-  });
-
   it('should match snapshot if no haikus exist', () => {
     haikus = [];
 

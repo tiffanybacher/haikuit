@@ -5,10 +5,6 @@ import Haiku from '../Haiku/Haiku';
 import BackBtn from '../BackBtn/BackBtn';
 
 export class HaikusContainer extends Component {
-  goBack = () => {
-    this.props.history.goBack();
-  }
-
   renderHaikuCards = () => {
     let haikuCards;
     const { haikus } = this.props;
@@ -32,7 +28,7 @@ export class HaikusContainer extends Component {
     return (
       <section className="HaikusContainer">
         <div className="haikus-header">
-          <BackBtn goBack={this.goBack} />
+          <BackBtn goBack={this.props.history.goBack} />
           <h2>YOUR HAIKUS</h2>
         </div>
         {this.renderHaikuCards()}

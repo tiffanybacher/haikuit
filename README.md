@@ -49,8 +49,7 @@ Create a file named `apiKeys.js` within `src/apiCalls`.
 
 Create a exported variable named `wordsApiKey` within `apiKeys.js` and assign it your key.
 
-`// src/apiCalls/apiKeys.js`
-
+`// src/apiCalls/apiKeys.js`\
 `// // export const wordsApiKey = '[your key here]';`
 
 `/src/apiCalls/apiKeys.js` is already within `.gitignore` so your key will not get pushed to GitHub.

@@ -28,3 +28,26 @@ exports[`Haiku should match snapshot 1`] = `
   </p>
 </article>
 `;
+
+exports[`Haiku should match snapshot if haiku is passed in 1`] = `
+<article
+  className="Haiku"
+>
+  <p
+    className="title"
+  >
+    <b>
+      title
+    </b>
+  </p>
+  <p
+    className="line-1"
+  />
+  <p
+    className="line-2"
+  />
+  <p
+    className="line-3"
+  />
+</article>
+`;

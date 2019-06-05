@@ -1,7 +1,6 @@
 import React from 'react';
 
 const WordResult = (props) => {
-  console.log(props)
   let syllables;
 
   if (props.syllables) {

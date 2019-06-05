@@ -1,0 +1,49 @@
+.HaikusContainer {
+  h2 {
+    margin: 20px 0 0;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .Haiku:hover {
+    background: $purple;
+  }
+
+  .no-hover:hover {
+    background: white;
+  }
+}
+
+.haikus-header {
+  background: white;
+  margin: 0 0 20px 0;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .haikus-header {
+    font-size: 1.1em;
+    padding: 30px 50px 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .haikus-header {
+    font-size: 1.2em;
+    padding: 40px 75px 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .haikus-header {
+    font-size: 1.3em;
+    padding: 50px 100px 20px;
+  }
+}

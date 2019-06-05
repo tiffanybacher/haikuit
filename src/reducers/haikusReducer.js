@@ -14,7 +14,7 @@ export const haikusReducer = (state = [], action) => {
 
     case ('DELETE_HAIKU'):
       return state.filter(haiku => haiku.id !== action.id);
-      
+
     default:
       return state
   }

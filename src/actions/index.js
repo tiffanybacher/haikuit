@@ -13,3 +13,17 @@ export const deleteHaiku = (id) => ({
   type: 'DELETE_HAIKU',
   id
 });
+
+export const setError = (message) => ({
+  type: 'SET_ERROR',
+  message
+});
+
+export const clearError = () => ({
+  type: 'CLEAR_ERROR'
+});
+
+export const setLoading = (bool) => ({
+  type: 'SET_LOADING',
+  isLoading: bool
+});

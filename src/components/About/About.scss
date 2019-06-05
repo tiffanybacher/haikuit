@@ -2,21 +2,21 @@
   background: white;
   margin: 0;
   padding: 20px;
+}
 
-  .back-btn {
-    font-style: italic;
-    text-decoration: underline;
-  }
-
-  h2 {
-    margin: 40px 0 20px 0;
-  }
+h2 {
+  margin: 20px 0 20px 0;
 }
 
 @media only screen and (min-width: 768px) {
   .About {
     font-size: 1.1em;
     padding: 30px 50px;
+  }
+
+  .About-blurb {
+    margin-top: 30px;
+    padding: 0 100px;
   }
 }
 
@@ -25,11 +25,15 @@
     font-size: 1.2em;
     padding: 40px 75px;
   }
+
+  .About-blurb {
+    margin-top: 40px;
+    padding: 0 150px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .About {
-    font-size: 1.3em;
-    padding: 50px 250px;
+    padding: 50px 100px;
   }
 }

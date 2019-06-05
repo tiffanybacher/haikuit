@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WordResult should match snapshot if there is a syllables prop 1`] = `
+<article
+  className="WordResult"
+>
+  <h4>
+    tenacity
+    :
+    <span
+      className="syllables"
+    >
+       
+      4
+       syllables
+    </span>
+  </h4>
+</article>
+`;
+
+exports[`WordResult should match snapshot if there is no syllables prop 1`] = `
+<article
+  className="WordResult"
+>
+  <h4>
+    cat
+    :
+    <span
+      className="syllables"
+    >
+       
+      1
+       syllables
+    </span>
+  </h4>
+</article>
+`;

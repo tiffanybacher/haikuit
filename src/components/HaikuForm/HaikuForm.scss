@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   font-weight: 600;
+  margin: 10px 0 0 0;
 
   input {
     border: 1px solid #DDD;
@@ -15,23 +16,41 @@
     }
   }
 
-  .HaikuForm-submit {
-    background-color: $purple;
+  button {
+    background: $purple;
     color: white;
     font-weight: 600;
-    margin: 10px 0 0 0;
+    margin: 10px 0;
     padding: 10px;
+
+    &:hover {
+      background: rgba($purple, .7);
+    }
   }
+
+  .HaikuForm-submit {
+    margin-bottom: 20px;
+
+    &:disabled {
+      background: #CCC;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.syllable-label {
+  color: black;
 }
 
 @media only screen and (min-width: 768px) {
   .HaikuForm {
+    margin: 20px 0 0 0;
+
     input { 
       margin: 5px 0 15px 0;
-    }
-
-    .HaikuForm-submit {
-      margin: 25px 0 0 0;
     }
   }
 }

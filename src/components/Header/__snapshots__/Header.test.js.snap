@@ -1,82 +1,172 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should match snapshot 1`] = `
-<header
-  className="Header"
->
-  <div
-    className="flex-container"
+<div>
+  <header
+    className="Header"
   >
-    <button
-      className="hamburger-icon"
-      onClick={[MockFunction]}
+    <div
+      className="flex-container"
     >
-      <i
-        className="fas fa-bars"
-      />
-    </button>
-    <Link
-      tabIndex="-1"
-      to="/"
-    >
-      <h1>
-        Haikuit
+      <button
+        className="hamburger-icon"
+        onClick={[MockFunction]}
+      >
         <i
-          className="fas fa-feather-alt"
+          className="fas fa-bars"
         />
-      </h1>
-    </Link>
-    <button
-      className="search-icon"
-      onClick={[Function]}
+      </button>
+      <Link
+        tabIndex="-1"
+        to="/"
+      >
+        <h1>
+          Haikuit
+          <i
+            className="fas fa-feather-alt"
+          />
+        </h1>
+      </Link>
+      <button
+        className="search-icon"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-search"
+        />
+      </button>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header should match snapshot if result is shown 1`] = `
+<div>
+  <header
+    className="Header"
+  >
+    <div
+      className="flex-container"
     >
-      <i
-        className="fas fa-search"
-      />
-    </button>
-  </div>
-</header>
+      <button
+        className="hamburger-icon"
+        onClick={[MockFunction]}
+      >
+        <i
+          className="fas fa-bars"
+        />
+      </button>
+      <Link
+        tabIndex="-1"
+        to="/"
+      >
+        <h1>
+          Haikuit
+          <i
+            className="fas fa-feather-alt"
+          />
+        </h1>
+      </Link>
+      <button
+        className="search-icon"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-search"
+        />
+      </button>
+    </div>
+    <div
+      className="search-bar"
+    >
+      <form
+        className="search-form"
+        onSubmit={[Function]}
+      >
+        <input
+          className="search-input"
+          onChange={[Function]}
+          placeholder="Search for a word..."
+          type="text"
+          value=""
+        />
+      </form>
+      <button
+        className="clear-btn"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-times"
+        />
+      </button>
+    </div>
+    <WordResult
+      word="tenacity"
+    />
+  </header>
+</div>
 `;
 
 exports[`Header should match snapshot if searchShown is true 1`] = `
-<header
-  className="Header"
->
-  <div
-    className="flex-container"
+<div>
+  <header
+    className="Header"
   >
-    <button
-      className="hamburger-icon"
-      onClick={[MockFunction]}
+    <div
+      className="flex-container"
     >
-      <i
-        className="fas fa-bars"
-      />
-    </button>
-    <Link
-      tabIndex="-1"
-      to="/"
-    >
-      <h1>
-        Haikuit
+      <button
+        className="hamburger-icon"
+        onClick={[MockFunction]}
+      >
         <i
-          className="fas fa-feather-alt"
+          className="fas fa-bars"
         />
-      </h1>
-    </Link>
-    <button
-      className="search-icon"
-      onClick={[Function]}
+      </button>
+      <Link
+        tabIndex="-1"
+        to="/"
+      >
+        <h1>
+          Haikuit
+          <i
+            className="fas fa-feather-alt"
+          />
+        </h1>
+      </Link>
+      <button
+        className="search-icon"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-search"
+        />
+      </button>
+    </div>
+    <div
+      className="search-bar"
     >
-      <i
-        className="fas fa-search"
-      />
-    </button>
-  </div>
-  <input
-    className="search-input"
-    placeholder="Search for a word..."
-    type="text"
-  />
-</header>
+      <form
+        className="search-form"
+        onSubmit={[Function]}
+      >
+        <input
+          className="search-input"
+          onChange={[Function]}
+          placeholder="Search for a word..."
+          type="text"
+          value=""
+        />
+      </form>
+      <button
+        className="clear-btn"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-times"
+        />
+      </button>
+    </div>
+  </header>
+</div>
 `;

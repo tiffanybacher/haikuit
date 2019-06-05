@@ -50,7 +50,7 @@ export class Header extends Component {
   renderSearch = () => {
     return this.state.searchShown 
       ? <div className="search-bar">
-          <form onSubmit={this.submitSearch}>
+          <form className="search-form" onSubmit={this.submitSearch}>
             <input 
               type="text" 
               className="search-input" 
@@ -58,7 +58,7 @@ export class Header extends Component {
               value={this.state.searchQuery}
               onChange={this.updateSearchQuery} />
           </form>
-          <button onClick={this.handleClear} className="search-btn">
+          <button onClick={this.handleClear} className="clear-btn">
             <i className="fas fa-times"></i>
           </button>
         </div>

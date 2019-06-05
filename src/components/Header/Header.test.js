@@ -1,6 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Header } from './Header';
+import { Header, mapDispatchToProps } from './Header';
+import { fetchWord } from '../../apiCalls/fetchWord';
+
+jest.mock('../../apiCalls/fetchWord');
 
 describe('Header', () => {
   let toggleMenu;
@@ -13,7 +16,8 @@ describe('Header', () => {
     wrapper = shallow(
       <Header 
         toggleMenu={toggleMenu} 
-        menuShown={menuShown} />
+        menuShown={menuShown}
+        fetchWord={fetchWord} />
     );
   });
 
@@ -62,5 +66,34 @@ describe('Header', () => {
     wrapper.find('.search-input').simulate('change', mockEvent);
 
     expect(wrapper.state('searchQuery')).toEqual('particular');
+  });
+
+  it('should clear the search input', () => {
+    wrapper.setState({ searchShown: true });
+
+    wrapper.find('.clear-btn').simulate('click');
+
+    expect(wrapper.state('searchQuery')).toEqual('');
+  });
+
+  it('should match snapshot if result is shown', () => {
+    wrapper.setState({
+      searchShown: true,
+      resultShown: true,
+      currentResult: { word: 'tenacity' }
+    });
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should map fetchWord from dispatch to props', () => {
+    const mockDispatch = jest.fn();
+    const mockWord = 'tenacity';
+    const thunk = fetchWord(mockWord);
+    const props = mapDispatchToProps(mockDispatch);
+
+    props.fetchWord(mockWord);
+
+    expect(mockDispatch).toHaveBeenCalledWith(thunk);
   });
 });

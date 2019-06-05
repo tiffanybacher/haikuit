@@ -1,6 +1,7 @@
 export const haikusReducer = (state = [], action) => {
   switch (action.type) {
     case ('ADD_HAIKU'):
+    console.log(state)
       return [...state, action.haiku];
 
     case ('EDIT_HAIKU'):
@@ -14,7 +15,7 @@ export const haikusReducer = (state = [], action) => {
 
     case ('DELETE_HAIKU'):
       return state.filter(haiku => haiku.id !== action.id);
-      
+
     default:
       return state
   }

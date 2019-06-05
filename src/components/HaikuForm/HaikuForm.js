@@ -42,7 +42,9 @@ export class HaikuForm extends Component {
 
       this.props.fetchWord(newWord)
         .then(data => {
-          if (data.syllables) {
+          if (!data) {
+            lineCount = -1;
+          } else if (data.syllables) {
             lineCount += data.syllables.count;
           } else {
             lineCount += 1;
@@ -94,6 +96,28 @@ export class HaikuForm extends Component {
     return disabled;
   }
 
+  renderMsg = (num) => {
+    const { line1Syllables, line2Syllables, line3Syllables } = this.state;
+    let count;
+    let message;
+
+    if (num === 1) {
+      count = line1Syllables;
+    } else if (num === 2) {
+      count = line2Syllables;
+    } else if (num === 3) {
+      count = line3Syllables;
+    }
+
+    if (count === -1) {
+      message = 'Spelling Error';
+    } else {
+      message = ` ${count} syllables`;
+    }
+
+    return message;
+  }
+
   render() {
     const { line1Syllables, line2Syllables, line3Syllables } = this.state;
 
@@ -108,13 +132,13 @@ export class HaikuForm extends Component {
           onChange={this.handleChange} />
         <label 
           htmlFor="line-1-input"
-          className={line1Syllables > 0 ? "hidden" : null}>
+          className={line1Syllables === -1 || line1Syllables > 0 ? "hidden" : null}>
           Line 1 - 5 syllables
         </label>
         <label 
           htmlFor="line-1-input" 
           className={line1Syllables === 0 ? "hidden" : null}>
-          <span className="syllable-label"> {line1Syllables} syllables</span>
+          <span className="syllable-label">{this.renderMsg(1)}</span>
         </label>
         <input 
           type="text" 
@@ -124,13 +148,13 @@ export class HaikuForm extends Component {
           onChange={this.handleChange} />
         <label 
           htmlFor="line-2-input"
-          className={line2Syllables > 0 ? "hidden" : null}>
+          className={line2Syllables === -1 || line2Syllables > 0 ? "hidden" : null}>
           Line 2 - 7 syllables
         </label>
         <label 
           htmlFor="line-2-input" 
           className={line2Syllables === 0 ? "hidden" : null}>
-          <span className="syllable-label"> {line2Syllables} syllables</span>
+          <span className="syllable-label">{this.renderMsg(2)}</span>
         </label>
         <input 
           type="text" 
@@ -140,13 +164,13 @@ export class HaikuForm extends Component {
           onChange={this.handleChange} />
         <label 
           htmlFor="line-3-input"
-          className={line3Syllables > 0 ? "hidden" : null}>
+          className={line3Syllables === -1 || line3Syllables > 0 ? "hidden" : null}>
           Line 3 - 5 syllables
         </label>
         <label 
           htmlFor="line-3-input" 
           className={line3Syllables === 0 ? "hidden" : null}>
-          <span className="syllable-label"> {line3Syllables} syllables</span>
+          <span className="syllable-label">{this.renderMsg(3)}</span>
         </label>
         <input 
           type="text" 

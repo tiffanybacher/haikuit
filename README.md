@@ -42,7 +42,7 @@ run npm start to view it in your browser.
 ## API
 [WordsAPI](https://rapidapi.com/wordsapi/api/wordsapi)
 
-## Setting up the API key
+## Setting up a API key
 Obtain a key from [WordsAPI](https://rapidapi.com/wordsapi/api/wordsapi).\
 Create a file named `apiKeys.js` within `src/apiCalls`.\
 Create a exported variable named `wordsApiKey` within `apiKeys.js` and assign it your key.

@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Haiku from '../Haiku/Haiku';
 
 export class SavedHaiku extends Component {
+
+  seeAllClick = () => {
+
+  }
+
   render() {
     const id = parseInt(this.props.match.params.id);
     const haiku = this.props.haikus.find(haiku => {
@@ -14,8 +20,8 @@ export class SavedHaiku extends Component {
         <h2>Your Haiku is Saved!</h2>
         <Haiku { ...haiku } />
         <div className="btn-container">
-          <button>Edit</button>
-          <button>See All Haikus</button>
+          <button><Link to={`/haiku/${id}/edit`}>Edit</Link></button>
+          <button><Link to={'/haikus'}>See All Haikus</Link></button>
         </div>
       </section>
     );

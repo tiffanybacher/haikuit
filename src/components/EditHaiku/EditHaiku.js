@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HaikuForm from '../HaikuForm/HaikuForm';
 
-export class HaikuDetails extends Component {
+export class EditHaiku extends Component {
   render() {
     const id = parseInt(this.props.match.params.id);
     const haiku = this.props.haikus.find(haiku => {
@@ -10,7 +10,7 @@ export class HaikuDetails extends Component {
     });
 
     return (
-      <section className="HaikuDetails">
+      <section className="EditHaiku">
         <h2>Edit Your Haiku</h2>
         <HaikuForm {...haiku} />
       </section>
@@ -22,4 +22,4 @@ export const mapStateToProps = (state) => ({
   haikus: state.haikus
 });
 
-export default connect(mapStateToProps)(HaikuDetails);
+export default connect(mapStateToProps)(EditHaiku);

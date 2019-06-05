@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { HaikuDetails, mapStateToProps } from './HaikuDetails';
+import { EditHaiku, mapStateToProps } from './EditHaiku';
 
-describe('HaikuDetails', () => {
+describe('EditHaiku', () => {
   let mockMatch;
   let mockHaikus;
   let wrapper;
@@ -11,7 +11,7 @@ describe('HaikuDetails', () => {
     mockMatch = { params: { id: 1} };
     mockHaikus = [{ title: 'Title', id: 1 }];
     wrapper = shallow(
-      <HaikuDetails 
+      <EditHaiku 
         match={mockMatch}
         haikus={mockHaikus} />
     );

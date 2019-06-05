@@ -13,6 +13,9 @@ My personal learning goals of this project was to build and fully test an app ut
 <img width="367" alt="Screen Shot 2019-06-05 at 2 33 25 AM" src="https://user-images.githubusercontent.com/46252038/58943840-d5b9f700-873d-11e9-92d2-a9cd4447da85.png">
 <img width="367" alt="Screen Shot 2019-06-05 at 2 34 07 AM" src="https://user-images.githubusercontent.com/46252038/58943863-e5394000-873d-11e9-9cdb-a85bc3c71ca7.png">
 
+## Initial Wireframe
+![IMG_6174](https://user-images.githubusercontent.com/46252038/58944859-df445e80-873f-11e9-8ca7-9a0ba6325107.jpg)
+
 ## Technologies Used
 • HTML
 • SCSS

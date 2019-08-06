@@ -1,4 +1,5 @@
 # Haikuit
+## By [Tiffany Bacher](https://github.com/tiffanybacher)
 
 ## Description
 The goal of this project was to create a simple app that could help users write Haikus. Users can either keep track of syllables of syllables in each line of their haiku or they can search a word to find the number of syllables in any word!

@@ -42,14 +42,13 @@ run npm start to view it in your browser.
 
 ## Setting up an API key
 Obtain a key from [WordsAPI](https://rapidapi.com/wordsapi/api/wordsapi).\
-Create a file named `apiKeys.js` within `src/apiCalls`.\
-Create a exported variable named `wordsApiKey` within `apiKeys.js` and assign it your key.
+Create a file named `.env` outside of `src`.\
+Create a variable named `REACT_APP_WORDS_KEY` within `.env` and assign it your key.
 
-`// src/apiCalls/apiKeys.js`\
-`// // export const wordsApiKey = '[your key here]';`
+`REACT_APP_WORDS_KEY=<your key here>`\
 
-`{ wordsApiKey }` is already properly imported where needed.\
-`/src/apiCalls/apiKeys.js` is already within `.gitignore` so your key will not get pushed to GitHub.
+`wordsApiKey` is assigned to the environment variable where needed.\
+`.env` is already within `.gitignore` so your key will not get pushed to GitHub.
 
 ## Issue tracking and future enhancements
 https://github.com/tiffanybacher/haikuit/issues

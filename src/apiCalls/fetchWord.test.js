@@ -1,5 +1,4 @@
 import { fetchWord } from './fetchWord';
-import { wordsApiKey } from './apiKeys';
 import * as actions from '../actions';
 
 jest.mock('../actions');

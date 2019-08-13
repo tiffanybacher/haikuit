@@ -1,1 +1,0 @@
-export const wordsApiKey = 'eb0eafc31cmshf64d24e82c012a0p1c8a93jsnb7c192842282';

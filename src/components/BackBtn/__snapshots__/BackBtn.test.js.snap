@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchIcon should match snapshot 1`] = `
+exports[`BackBtn should match snapshot 1`] = `
 <button
+  className="back-btn"
   onClick={[MockFunction]}
 >
-  <i
-    className="fas fa-search"
-  />
+  Back
 </button>
 `;

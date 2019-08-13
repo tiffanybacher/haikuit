@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Haiku should match snapshot 1`] = `
+<article
+  className="no-hover Haiku"
+>
+  <p
+    className="title"
+  >
+    <b>
+      A Haiku about no haikus
+    </b>
+  </p>
+  <p
+    className="line-1"
+  >
+    You have no haikus!
+  </p>
+  <p
+    className="line-2"
+  >
+    Oh no! How sad. But don't fear!
+  </p>
+  <p
+    className="line-3"
+  >
+    Write one or a few!
+  </p>
+</article>
+`;
+
+exports[`Haiku should match snapshot if haiku is passed in 1`] = `
+<article
+  className="Haiku"
+>
+  <p
+    className="title"
+  >
+    <b>
+      title
+    </b>
+  </p>
+  <p
+    className="line-1"
+  />
+  <p
+    className="line-2"
+  />
+  <p
+    className="line-3"
+  />
+</article>
+`;

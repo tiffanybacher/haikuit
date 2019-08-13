@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavedHaiku should match snapshot 1`] = `
+<section
+  className="SavedHaiku"
+>
+  <Link
+    className="back-home-btn"
+    to="/"
+  >
+    Back Home
+  </Link>
+  <h2>
+    Your Haiku is Saved!
+  </h2>
+  <Haiku />
+  <div
+    className="btn-container"
+  >
+    <button>
+      <Link
+        className="edit-btn"
+        to="/haiku/111/edit"
+      >
+        Edit
+      </Link>
+    </button>
+    <button>
+      <Link
+        className="see-all-btn"
+        to="/haikus"
+      >
+        See All Haikus
+      </Link>
+    </button>
+  </div>
+</section>
+`;

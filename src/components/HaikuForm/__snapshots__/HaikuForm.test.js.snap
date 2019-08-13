@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HaikuForm should match snapshot 1`] = `
+<form
+  className="HaikuForm"
+>
+  <label
+    htmlFor="title-input"
+  >
+    Title
+  </label>
+  <input
+    id="title-input"
+    name="title"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <label
+    className={null}
+    htmlFor="line-1-input"
+  >
+    Line 1 - 5 syllables
+  </label>
+  <label
+    className="hidden"
+    htmlFor="line-1-input"
+  >
+    <span
+      className="syllable-label"
+    >
+      0 syllables
+    </span>
+  </label>
+  <input
+    id="line-1-input"
+    name="line1"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <label
+    className={null}
+    htmlFor="line-2-input"
+  >
+    Line 2 - 7 syllables
+  </label>
+  <label
+    className="hidden"
+    htmlFor="line-2-input"
+  >
+    <span
+      className="syllable-label"
+    >
+      0 syllables
+    </span>
+  </label>
+  <input
+    id="line-2-input"
+    name="line2"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <label
+    className={null}
+    htmlFor="line-3-input"
+  >
+    Line 3 - 5 syllables
+  </label>
+  <label
+    className="hidden"
+    htmlFor="line-3-input"
+  >
+    <span
+      className="syllable-label"
+    >
+      0 syllables
+    </span>
+  </label>
+  <input
+    id="line-3-input"
+    name="line3"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <button
+    className="HaikuForm-check"
+    onClick={[Function]}
+  >
+    Check Syllables
+  </button>
+  <button
+    className="HaikuForm-submit"
+    disabled={true}
+    onClick={[Function]}
+  >
+    Save
+  </button>
+  <button
+    className="delete-btn"
+    onClick={[Function]}
+  >
+    Delete This Haiku
+  </button>
+</form>
+`;

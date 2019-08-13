@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HaikusContainer should match snapshot 1`] = `
+<section
+  className="HaikusContainer"
+>
+  <div
+    className="haikus-header"
+  >
+    <BackBtn
+      goBack={[MockFunction]}
+    />
+    <h2>
+      YOUR HAIKUS
+    </h2>
+  </div>
+  <Link
+    key="111"
+    to="/haiku/111/edit"
+  >
+    <Haiku
+      id={111}
+      key="111"
+      title="Title"
+    />
+  </Link>
+</section>
+`;
+
+exports[`HaikusContainer should match snapshot if no haikus exist 1`] = `
+<section
+  className="HaikusContainer"
+>
+  <div
+    className="haikus-header"
+  >
+    <BackBtn
+      goBack={[MockFunction]}
+    />
+    <h2>
+      YOUR HAIKUS
+    </h2>
+  </div>
+  <Link
+    key="111"
+    to="/haiku/111/edit"
+  >
+    <Haiku
+      id={111}
+      key="111"
+      title="Title"
+    />
+  </Link>
+</section>
+`;

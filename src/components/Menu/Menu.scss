@@ -1,6 +1,6 @@
 .Menu {
   background: rgba(black, .5);
-  height: 100%;
+  height: 110%;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -14,16 +14,40 @@
   height: 100%;
   width: 60%;
 
-  .fa-times {
-    color: white;
-    font-size: 1.75em;
+  .btn-holder {
+    text-align: right;
+
+    .fa-times {
+      color: white;
+      font-size: 1.75em;
+      padding:20px;
+    }
   }
 
-  li {
-    font-size: 1.25em;
-    padding: 10px;
-    list-style-type: none;
-    transition: 0.3s;
+  .Menu-header {
+    text-align: center;
+    margin: 20px 10px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-list {
+    margin: 50px 0 0 0;
+
+    li {
+      border-top: 1px solid rgba(white, .1);
+      font-size: 1.1em;
+      list-style-type: none;
+      text-transform: uppercase;
+      padding: 20px;
+
+      &:last-child {
+        border-bottom: 1px solid rgba(white, .1);
+      }
+    }
   }
 }
 

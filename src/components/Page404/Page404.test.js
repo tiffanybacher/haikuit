@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import HamburgerIcon from './HamburgerIcon';
+import Page404 from './Page404';
 
-describe('HamburgerIcon', () => {
+describe('Page404', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<HamburgerIcon />);
+    wrapper = shallow(<Page404 />);
   });
 
   it('should match snapshot', () => {

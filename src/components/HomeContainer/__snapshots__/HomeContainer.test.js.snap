@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeContainer should match snapshot 1`] = `
+<section
+  className="HomeContainer"
+>
+  <div
+    className="home-card"
+  >
+    <h2>
+      Your Lastest Haiku
+    </h2>
+    <Haiku
+      id={111}
+      title="Title"
+    />
+  </div>
+  <div
+    className="home-card"
+  >
+    <h2>
+      Write a Haiku!
+    </h2>
+    <Connect(HaikuForm)
+      redirect={[Function]}
+    />
+  </div>
+</section>
+`;
+
+exports[`HomeContainer should match snapshot if no latest haiku exists 1`] = `
+<section
+  className="HomeContainer"
+>
+  <div
+    className="home-card"
+  >
+    <h2>
+      Your Lastest Haiku
+    </h2>
+    <Haiku
+      id={111}
+      title="Title"
+    />
+  </div>
+  <div
+    className="home-card"
+  >
+    <h2>
+      Write a Haiku!
+    </h2>
+    <Connect(HaikuForm)
+      redirect={[Function]}
+    />
+  </div>
+</section>
+`;

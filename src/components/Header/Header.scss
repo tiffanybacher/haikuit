@@ -1,23 +1,35 @@
 .Header {
   background: $purple;
   color: white;
-  padding: 10px 15px 15px 15px;
+  margin: 0;
+  padding: 10px 20px 15px 20px;
   text-align: center;
 
-  h1 {
-    font-family: 'Baloo', sans-serif;
-    font-size: 2.5em;
-    letter-spacing: 2px;
-    margin: 0 15px 15px 15px;
-    position: relative;
-    top: 10px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
   }
 
   .search-input {
-    @include border;
+    border: none;
+    display: inline;
     font-style: italic;
-    padding: 10px;
-    width: 50%;
+    padding: 9px;
+    width: 100%;
+  }
+
+  .clear-btn {
+    background: white;
+    border: none;
+    color: #CCC;
+    display: inline;
+    font-weight: 600;
+    padding: 9px;
   }
 
   .flex-container {
@@ -28,5 +40,33 @@
   .fa-bars {
     color: white;
     font-size: 1.75em;
+  }
+}
+
+h1 {
+  color: white;
+  font-family: 'Baloo', sans-serif;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  margin: 0 15px 15px 15px;
+  position: relative;
+  top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Header {
+    padding: 10px 50px 15px 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .Header {
+    padding: 10px 75px 15px 75px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .Header {
+    padding: 10px 100px 15px 100px;
   }
 }

@@ -1,0 +1,37 @@
+.EditHaiku {
+  background: white;
+  padding: 20px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .delete-btn {
+    background: darkred;
+    margin-top: 0px;
+
+    &:hover {
+      background: rgba($purple, .7);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .EditHaiku {
+    font-size: 1.1em;
+    padding: 30px 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .EditHaiku {
+    font-size: 1.2em;
+    padding: 40px 75px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .EditHaiku {
+    padding: 50px 100px;
+  }
+}

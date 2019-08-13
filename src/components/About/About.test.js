@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SearchIcon from './SearchIcon';
+import About from './About';
 
-describe('SearchIcon', () => {
-  let toggleSearch;
+describe('About', () => {
+  let mockHistory;
   let wrapper;
 
   beforeEach(() => {
-    toggleSearch = jest.fn();
+    mockHistory = { goBack: jest.fn() };
     wrapper = shallow(
-      <SearchIcon toggleSearch={toggleSearch}/>
+      <About history={mockHistory} />
     );
   });
 

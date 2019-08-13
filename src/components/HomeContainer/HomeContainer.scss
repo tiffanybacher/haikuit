@@ -1,0 +1,46 @@
+.HomeContainer {
+  .home-card {
+    background: white;
+    margin: 0 0 20px;
+    padding: 20px 20px 1px;
+  }
+
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .Haiku {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .HomeContainer {
+    .home-card {
+      font-size: 1.1em;
+      padding: 30px 50px 1px;
+    }
+
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .HomeContainer {
+    .home-card {
+      font-size: 1.2em;
+      padding: 40px 75px 1px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .HomeContainer {
+    .home-card {
+      padding: 50px 100px 1px;
+    }
+  }
+}

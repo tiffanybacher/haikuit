@@ -11,8 +11,10 @@ describe('fetchWord', () => {
   let mockData;
   let thunk;
   let dispatch;
+  let wordsApiKey;
 
   beforeEach(() => {
+    wordsApiKey = process.env.REACT_APP_WORDS_KEY;
     searchQuery = 'tenacity';
     url = `https://wordsapiv1.p.mashape.com/words/${searchQuery}`;
     options = { headers: { 'X-RapidAPI-Key': `${wordsApiKey}` } };
